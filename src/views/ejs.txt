@@ -1,0 +1,13 @@
+Uso do EJS
+
+<% Controle de Fluxo (if, for)%>
+<%= Imprime escapando caracteres (Texto)%>
+<%- imprime sem escapar caracteres (HTML)%>
+<%# Comentário %>
+<%- include('caminho/arquivo.ejs')%>
+
+<% if (condicao) { %>
+  <%- <span style="color: red;">Verdadeiro</span> %>
+<% } else { %>
+  <%= Falso%>
+<% } %>
