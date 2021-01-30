@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 :root {
-  --body-background-color: #f8f8fb
+  --body-background-color: #f8f8fb;
+  --background-form-header: rgba(85, 110, 230, 0.25);
+  --background-form-header-despesa: rgba(219, 0, 0, 0.28);
+  --background-form-header-receita: rgba(62, 192, 141, 0.25);
+  --button-despesa: linear-gradient(180deg, #E52D27 0%, #B31217 100%);
 }
 
 * {
@@ -11,33 +15,52 @@
 
 }
 
+ul, nav{
+  list-style: none;
+}
+
 body {
   background-color: var(--body-background-color);
   font-family: 'Poppins';
+}
+
+.welcome-2{
+  font-size: 0.85rem;
+  margin-left: 24px;
+}
+
+.welcome{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-top: 24px;
+  margin: 24px 0 0 24px;
+}
+
+p.welcome, p.welcome-2{
+  color: #556EE6;
+  max-width: 200px!important;
+}
+
+.img-login{
+  float: right;
 }
 
 .title-login{
   font-size: 2rem;
 }
 
-.welcome-2{
-  font-size: 0.85rem;
-}
-
-.welcome{
-  font-size: 1.1rem;
-font-weight: 500;
-}
-
-p.welcome, p.welcome-2{
-  color: #556EE6;
-  line-height: 50%;
-}
 .form-header{
-  background: rgba(85, 110, 230, 0.25);
+  background: var(--background-form-header);
   border-radius: 28px 28px 0px 0px;
   height: 111px;
-  padding: 24px 0 0 24px;
+}
+
+.form-header.receita{
+  background: var(--background-form-header-receita);
+}
+
+.form-header.despesa{
+  background: var(--background-form-header-despesa);
 }
 
 .form-login{
@@ -61,8 +84,39 @@ input, .btn{
   border-color: transparent!important;
 }
 
+.btn-despesa{
+  background: var(--button-despesa)!important;
+  color: white;
+}
+
+.btn-voltar a{
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: 'Poppins';
+  color: rgba(46, 58, 89,.9)!important;
+  text-decoration: none!important;
+}
+
+.btn-voltar a:hover{
+  text-decoration: none!important;
+  color: #2E3A59!important;
+  transition: .4s;
+}
+.btn-voltar{
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.btn.btn-despesa:focus, .btn.btn-despesa:active{
+  outline: 0!important;
+  border: none!important;
+}
+
 .buttons{
   margin-bottom: 24px!important;
+  color: white!important;
+  font-weight: 500!important;
 }
 
 .btn:focus{
@@ -91,4 +145,38 @@ input, .btn{
 
 .alert{
   margin: 12px!important;
+}
+
+input[type=radio]{
+  border: none;
+  outline: none;
+
+}
+
+select{
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 28px;
+  background: url('/assets/img/icons/select.svg') no-repeat;
+  background-position-x: 96%;
+  background-position-y: center;
+  border: 1px solid #ced4da;
+  color: #495057;
+}
+
+option{
+  color: #495057;
+  border-radius: 28px;
+  padding: 6px 12px;
+}
+
+.side-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 255px;
+  background-color: #363740;
+  color:#A4A6B3; 
 }

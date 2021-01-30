@@ -1,7 +1,7 @@
 <%- include('includes/head'); %>
 
   <section class="container">
-    <h1>Lorem ipsum dolor sit amet</h1>
+    <h1>Inicio</h1>
     <h1>
       <%= csrfToken %>
     </h1>
@@ -11,6 +11,9 @@
       <input type="text" name="nome" id="">
       <button>Submit</button>
     </form>
+    <% if(user){ %> 
+    <a href="/overview/index">asdasd</a>
+    <% } %> 
   </section>
 
   <%- include('includes/footer') %>

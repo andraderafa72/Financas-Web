@@ -1,0 +1,77 @@
+<%- include('includes/head'); %>
+<%- include('includes/messages'); %>
+<%- include('includes/voltarButton'); %>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      
+      <div class="col-lg-6">
+
+        <div class="form-login mx-auto my-5">
+          
+          <div class="form-header despesa">
+            <h1 class="welcome title-login text-left">Cadastrar Despesa</h1>
+          </div>
+          <section class="form">
+            <form class="my-3 " action="/despesas/index" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <input type="hidden" name="owner" value="<%= user._id %>">
+              <div class="form-group">
+                <label>Identificador:</label>
+                <input type="text" class="form-control" name="identificador" placeholder="Digite um identificador">
+                <div class="error-ident" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Valor:</label>
+                <input type="text" class="form-control" name="valor" placeholder="Digite o valor da despesa">
+                <div class="error-valor" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Vencimento:</label>
+                <input type="date" class="form-control" name="vencimento">
+                <div class="error-vencimento" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Categoria:</label>
+                <select name="categoria" id="categoria" required>
+                  <option value="shopping">Shopping</option>
+                  <option value="restaurante">Restaurante</option>
+                  <option value="supermercado">Supermercado</option>
+                  <option value="lazer">Lazer</option>
+                  <option value="esporte">Esporte</option>
+                  <option value="eletronicos">Eletrônicos</option>
+                  <option value="transporte">Transporte</option>
+                  <option value="escola">Escola</option>
+                  <option value="faculdade">Faculdade</option>
+                </select>
+                <div class="error-categoria" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Icone:</label>
+                <div class="icones" style="display: flex; justify-content: space-between;"> 
+                  <input type="radio" class="form-control" name="icone" value="sim">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                  <input type="radio" class="form-control" name="icone">
+                </div>
+                <div class="error-icone" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+                           
+              <div class="mx-auto my-4 buttons">
+                <button type="submit" class="btn btn-despesa" style="width: 100%;">Registrar</button>
+              </div>
+            </form>
+          </section>
+          
+        </div>
+      </div>
+        <div class="col-lg-3"></div>
+        
+      </div>
+  </div>
+<%- include('includes/footer') %>
