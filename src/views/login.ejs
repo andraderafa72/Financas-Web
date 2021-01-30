@@ -1,0 +1,44 @@
+<%- include('includes/head'); %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    
+    <div class="col-lg-6">
+      
+      <div class="form-login mx-auto my-5">
+        
+        <div class="form-header">
+          <p class="welcome">Seja bem vindo!</p>
+          <p class="welcome-2">Conecte-se para continuar.</p> 
+        </div>
+        <%- include('includes/messages'); %>
+          <section class="form">
+            <h1 class="title-login text-left">Entrar</h1>
+            <form class="my-3 " action="/login/index" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" class="form-control" name="email" placeholder="Digite seu usuário">
+                <div class="error-email" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" name="password" placeholder="Digite sua senha">
+                <div class="error-password" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              
+              
+              <div class="mx-auto my-4 buttons">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar</button>
+              </div>
+            </form>
+          </section>
+          
+        </div>
+        <p class="txt-register text-center">Não possui uma conta? <a href="/register/index" class="register-link">Registre-se</a></p>
+      </div>
+        <div class="col-lg-3"></div>
+        
+      </div>
+  </div>
+<%- include('includes/footer') %>

@@ -1,60 +1,94 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 :root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
+  --body-background-color: #f8f8fb
 }
 
 * {
   box-sizing: border-box;
-  outline: 0;
+  outline: 0; 
+  margin: 0;
+  padding: 0;
+
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: var(--primary-color);
-  font-family: 'Open sans', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.5em;
+  background-color: var(--body-background-color);
+  font-family: 'Poppins';
 }
 
-.container {
-  max-width: 640px;
-  margin: 50px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+.title-login{
+  font-size: 2rem;
 }
 
-form input,
-form label,
-form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+.welcome-2{
+  font-size: 0.85rem;
 }
 
-form input {
-  font-size: 24px;
-  height: 50px;
-  padding: 0 20px;
+.welcome{
+  font-size: 1.1rem;
+font-weight: 500;
 }
 
-form input:focus {
-  outline: 1px solid var(--primary-color);
+p.welcome, p.welcome-2{
+  color: #556EE6;
+  line-height: 50%;
+}
+.form-header{
+  background: rgba(85, 110, 230, 0.25);
+  border-radius: 28px 28px 0px 0px;
+  height: 111px;
+  padding: 24px 0 0 24px;
 }
 
-form button {
-  border: none;
-  background: var(--primary-color);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
+.form-login{
+  background-color: #fff;
+  width: 450px!important;
+  border-radius: 28px;
+  padding-bottom: 24px!important;
+  box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
 }
 
-form button:hover {
-  background: var(--primary-color-darker);
+.form-group label{
+  margin-top: 5px;
+}
+
+input, .btn{
+  border-radius: 28px!important;
+}
+
+.btn{
+  background-color: #556EE6!important;
+  border-color: transparent!important;
+}
+
+.buttons{
+  margin-bottom: 24px!important;
+}
+
+.btn:focus{
+  outline: 0!important;
+  border-color: #4b5fc7;
+}
+
+
+.form{
+  margin: 24px 24px;
+
+}
+
+.txt-register{
+  font-family: 'Poppins';
+}
+
+.register-link{
+  color: #556EE6;
+  transition: .4s;
+}
+
+.register-link:hover{
+  text-decoration: none!important;
+}
+
+.alert{
+  margin: 12px!important;
 }

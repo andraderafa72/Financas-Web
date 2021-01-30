@@ -27,7 +27,7 @@ const csrf = require('csurf');
 app.use(helmet());
 
 // MIDDLEWARES
-const { csrfMiddleware, checkCSRFError } = require('./src/middlewares/globalMiddleware');
+const { csrfMiddleware, checkCSRFError, errorVariable } = require('./src/middlewares/globalMiddleware');
 
 // POSTAGEM DE FORMULÁRIO
 app.use(express.urlencoded({ extended: true }));
@@ -60,6 +60,7 @@ app.use(csrf());
 // USAR MIDDLEWARES
 app.use(csrfMiddleware);
 app.use(checkCSRFError);
+app.use(errorVariable);
 
 app.use(routes);
 
