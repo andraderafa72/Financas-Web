@@ -23,8 +23,21 @@ const path = require('path')
 
 // SEGURANÇA
 const helmet = require('helmet');
+const csp = require('helmet-csp');
 const csrf = require('csurf');
 app.use(helmet());
+app.use(csp({
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'","'unsafe-inline'" ,'unpkg.com', 'cdn.jsdelivr.net', 
+    'fonts.googleapis.com', 'use.fontawesome.com'],
+    scriptSrc: ["'self'","'unsafe-inline'",'cdn.jsdelivr.net', "'unsafe-eval'"],
+    fontSrc:["'self'",'fonts.googleapis.com', 'fonts.gstatic.com'],
+    imgSrc: ["'self'",'https:', 'data:']
+  },
+  reportOnly:false
+  })
+);
 
 // MIDDLEWARES
 const { csrfMiddleware, checkCSRFError, errorVariable } = require('./src/middlewares/globalMiddleware');

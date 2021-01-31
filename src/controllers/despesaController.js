@@ -4,6 +4,10 @@ exports.index = (req, res) => {
   res.render('despesas');
 }
 
+exports.indexRegister = (req, res) => {
+  res.render('despesasForm');
+}
+
 exports.send = async(req, res) => {
   try {
     const despesa = new Despesa(req.body);

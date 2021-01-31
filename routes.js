@@ -28,11 +28,15 @@ route.get('/login/logout', loginController.logout);
 route.get('/register/index', registerController.index);
 route.post('/register/index', registerController.send);
 
+// DESPESAS 
 route.get('/despesas/index', globalMiddleware.loginRequired, despesaController.index);
-route.post('/despesas/index', globalMiddleware.loginRequired, despesaController.send);
+route.get('/despesas/registrar/index', globalMiddleware.loginRequired, despesaController.indexRegister);
+route.post('/despesas/registrar/index', globalMiddleware.loginRequired, despesaController.send);
 
+// RECEITAS 
 route.get('/receitas/index', globalMiddleware.loginRequired, receitaController.index);
-route.post('/receitas/index', globalMiddleware.loginRequired, receitaController.send);
+route.get('/receitas/registrar/index', globalMiddleware.loginRequired, receitaController.indexRegister);
+route.post('/receitas/registrar/index', globalMiddleware.loginRequired, receitaController.send);
 
 route.get('/overview/index', globalMiddleware.loginRequired, overviewController.index);
 

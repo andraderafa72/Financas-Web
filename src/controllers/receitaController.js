@@ -3,6 +3,9 @@ const Receita = require('../models/receitasModel');
 exports.index = (req, res) => {
   res.render('receitas');
 }
+exports.indexRegister = (req, res) => {
+  res.render('receitasForm');
+}
 
 exports.send = async(req, res, next) => {
   try {
