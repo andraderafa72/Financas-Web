@@ -34,6 +34,11 @@ class Despesa {
     this.despesa = await DespesaModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
   }
 
+  async buscarReceitas(){
+    const despesa = await DespesaModel.find().sort({data: -1})
+    return despesa
+  }
+
   validate(){
     this.cleanUp();
 

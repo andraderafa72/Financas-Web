@@ -1,5 +1,6 @@
 <%- include('includes/head'); %>
   <% paginaAtual = 'overview' %> 
+  <% paginaAnterior = 'overview' %> 
   <%- include('includes/sideBar'); %>
   
   <div class="overview-container">
@@ -51,7 +52,7 @@
             <div class="top-1-bar"></div>
             <p class="limite-subtitle">Eletronicos</p>
           </div>
-          <p class="valor-limite">100%</p>
+          <p class="porcentagem-limite">100%</p>
         </div>
         <div class="top-2-limite">
           <img src="/assets/img/icons/logo.svg" alt="">
@@ -59,7 +60,7 @@
             <div class="top-2-bar"></div>
             <p class="limite-subtitle">Shopping</p>
           </div>
-          <p class="valor-limite">100%</p>
+          <p class="porcentagem-limite">100%</p>
 
         </div>
         <div class="top-3-limite">
@@ -68,14 +69,14 @@
             <div class="top-3-bar"></div>
             <p class="limite-subtitle">Viagens</p>
           </div>
-          <p class="valor-limite">100%</p>
+          <p class="porcentagem-limite">100%</p>
         </div>
       </div>
     
       <div class="btns-adicionar">
         <div class="imagem-app">'</div>
-        <div class="btn-overview-despesa">Despesa</div>
-        <div class="btn-overview-receita">Receita</div>
+        <a href="/despesas/registrar/index" class="btn-overview-despesa">Despesa <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
+        <a href="/receitas/registrar/index" class="btn-overview-receita">Receita  <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
       </div>
     </div>
         

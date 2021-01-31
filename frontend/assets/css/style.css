@@ -4,7 +4,9 @@
   --background-form-header-despesa: rgba(219, 0, 0, 0.28);
   --background-form-header-receita: rgba(62, 192, 141, 0.25);
   --button-despesa: linear-gradient(180deg, #E52D27 0%, #B31217 100%);
+  --button-despesa-hover: linear-gradient(180deg, #B31217 0%, #E52D27 100%);
   --button-receita: linear-gradient(180deg, #27DD9B 0%, #24FE41 100%);
+  --button-receita-hover: linear-gradient(180deg, #24FE41 0%, #27DD9B 100%);
 }
 
 * {
@@ -221,6 +223,7 @@ option{
 
 .side-bar-links nav li:hover a{
   color: #DDE2FF;
+  fill: #DDE2FF;
 }
   
 .side-bar-links nav li:hover{
@@ -463,7 +466,8 @@ td{
   border-radius: 28px;
 }
 
-.valor-limite{
+.valor-limite,
+.porcentagem-limite{
   font-family: 'Poppins';
   font-weight: 600;
   font-size: 23.9789px;
@@ -519,7 +523,7 @@ td{
   color: #AEAEAE;
 }
 
-.valor-limite{
+.porcentagem-limite{
   margin-left: 10px;
 }
 
@@ -551,10 +555,11 @@ td{
   font-size: 20px;
   line-height: 23px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
   color: #F7F8FC;
+  opacity: 0.9;
 }
 
 .btn-overview-despesa{
@@ -563,6 +568,8 @@ td{
   left: 76vw;
   bottom: 12.5vh;
   background: var(--button-despesa);
+  color: #F7F8FC;
+
 }
 .btn-overview-receita{
   width: 280px;
@@ -570,6 +577,23 @@ td{
   left: 76vw;
   bottom: 2.5vh;  
   background: var(--button-receita);
+  color: #F7F8FC;
+}
+
+.btn-overview-receita:hover{
+  transition: .4s;
+  opacity: 1;
+}
+
+.btn-overview-despesa:hover{
+  transition: .4s;
+  opacity: 1; 
+}
+
+.plus-overview{
+  position: absolute;
+  top: calc(50% - 13px);
+  right: 26px;
 }
 
 /* @MEDIA */
