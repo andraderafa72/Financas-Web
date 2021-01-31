@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
-
 :root {
   --body-background-color: #f8f8fb;
   --background-form-header: rgba(85, 110, 230, 0.25);
   --background-form-header-despesa: rgba(219, 0, 0, 0.28);
   --background-form-header-receita: rgba(62, 192, 141, 0.25);
   --button-despesa: linear-gradient(180deg, #E52D27 0%, #B31217 100%);
+  --button-receita: linear-gradient(180deg, #27DD9B 0%, #24FE41 100%);
 }
 
 * {
@@ -23,9 +21,15 @@ ul, nav{
   list-style: none;
 }
 
+body, html{
+  overflow: hidden;
+}
+
 body {
   background-color: var(--body-background-color);
   font-family: 'Poppins';
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .welcome-2{
@@ -175,12 +179,14 @@ option{
   padding: 6px 12px;
 }
 
+/* SIDEBAR */
 .side-bar{
-  position: absolute;
+  position: relative;
+  float: left;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 255px;
+  min-height: 100vh;
+  width: 20vw;
   background-color: #363740;
   color:#A4A6B3; 
   border-radius: 0 28px 28px 0;
@@ -239,7 +245,7 @@ option{
   opacity: 1;
 }
 
-a.transacoes img{
+a.transacoes:hover img{
   opacity: 1;
 }
 
@@ -278,4 +284,297 @@ a.transacoes img{
 .logout-link:hover{
   color:red!important;
   transition: .4s;
+}
+
+/* OVERVIEW */
+.overview-container{
+  max-height: 95vh;
+  padding: 3.3333vh 2.5vw 1.51vh 2.5vw ;
+  margin-left: 22vw;
+}
+ /* OVERVIEW TITLE */
+.overview-title{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 50%;
+  color: #404040;
+}
+
+.overview-subtitle{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16.0564px;
+  color: #AEAEAE;
+}
+
+/* GRAFICO ANUAL */
+.registro-graph{
+  position:absolute;
+  left: 24.5vw;
+  top: 15vh;
+  padding:1.5vh 2.6vw;
+  width: 38vw;
+  height: 40vh;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+}
+
+.chart-registro{
+  max-width: 32.5vw;
+  max-height: 27.5vh;
+}
+
+.overview-registro-title{
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 20.1118px;
+  color: #404040;
+}
+
+.overview-registro-subtitle{
+  font-family: 'Ubuntu';
+  font-size: 12px;
+  color: #AEAEAE;
+}
+
+/* HISTORICO DE TRANSAÇÕES */
+.historico-de-transacoes{
+  position: absolute;
+  left: 24.5vw;
+  top: 57.5vh;
+  padding:1.5vh 2.6vw;
+  width: 38vw;
+  height: 40vh;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+}
+
+.historico-title{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 20.1118px;
+  color: #404040;
+}
+
+.h-table{
+  height: 30vh; 
+  overflow: auto;
+}
+
+.historico-table{
+  width: 100%;
+}
+
+.historico-table tr,
+.historico-table td{
+  max-height: 35px
+}
+
+.historico-table th{
+  font-family: 'Ubuntu';
+  font-size: 12px;
+  line-height: 16px;
+  color: #AEAEAE;
+  text-align: left;
+}
+
+td{
+  padding:5px 0;
+  border-bottom: 0.5px solid #ECECEC;
+}
+
+.historico-table-i{
+  width: 5%;
+  font-size: 10px;
+  text-align: center;
+}
+
+.historico-table-id{
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  line-height: 16px;
+  color: #404040;
+}
+
+.historico-table-tipo,
+.historico-table-data{
+  font-family: 'Ubuntu';
+  font-size: 12px;
+  line-height: 14px;
+  color: #C7C7C7;
+}
+
+.historico-table-valor{
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+}
+
+
+/* LIMITES */
+.limites{
+  position: absolute;
+  width: 435.77px;
+  height:25vh; 
+  left: 65vw;
+  top: 15vh;
+}
+
+.limites-link{
+  display: flex;
+  align-items: center;
+}
+
+.limites-title{
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 20.1118px;
+  color: #404040;
+}
+
+.limites-link a{
+  font-weight: bold;
+  float: right;
+  width: 20.8px;
+  height: 19.1px;
+  background: url('/assets/img/icons/plus-circle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.limites-card{
+  width: 100%;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-limite{
+  width: 136.91px!important;
+  height: 134.28px!important;
+  margin: 0 5px;
+  padding:19px 20px 10px 21px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 28px;
+}
+
+.valor-limite{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 23.9789px;
+  line-height: 50%;
+  color: #696969;
+}
+.data-limite{
+  font-family: 'Poppins';
+  font-size: 14px;
+  color: #AEAEAE;
+}
+
+/* PROGRESSBAR LIMITES */
+.progressbar-limites{
+  position: absolute;
+  width: 32.25vw;
+  height: 25vh;
+  left: 65vw;
+  top: 47vh;
+}
+
+.top-1-limite,
+.top-2-limite,
+.top-3-limite{
+  margin: 3vh 0;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.top-1-limite img,
+.top-2-limite img,
+.top-3-limite img{
+  width: 30px;
+  height: 30px;
+}
+
+.top-1-bar,
+.top-2-bar,
+.top-3-bar{
+  min-width: 22.5vw;
+  height: 7.5px;
+  background: linear-gradient(270deg, #FCAE73 0%, #F79042 99.18%);
+  border-radius: 10.7766px;
+  margin-bottom: 5px;
+}
+
+.limite-subtitle{
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 17px;
+  color: #AEAEAE;
+}
+
+.valor-limite{
+  margin-left: 10px;
+}
+
+.pb-title{
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 20.1118px;
+  line-height: 30px;
+  color: #404040;
+}
+
+
+.imagem-app{
+  position: absolute;
+  width: 130px;
+  height: 19vh;
+  left: 65vw;
+  bottom: 2.5vh;
+  background: var(--button-receita);
+  border-radius: 28px;
+}
+
+.btn-overview-despesa,
+.btn-overview-receita{
+  position: absolute;
+  box-shadow: 14px 17px 17px rgba(7, 7, 7, 0.14);
+  border-radius: 28px;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #F7F8FC;
+}
+
+.btn-overview-despesa{
+  width: 280px;
+  height: 9vh;
+  left: 76vw;
+  bottom: 12.5vh;
+  background: var(--button-despesa);
+}
+.btn-overview-receita{
+  width: 280px;
+  height: 9vh;
+  left: 76vw;
+  bottom: 2.5vh;  
+  background: var(--button-receita);
+}
+
+/* @MEDIA */
+@media(max-width:1280px){
+  body, html{
+    overflow-x: auto;
+  }
 }

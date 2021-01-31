@@ -31,7 +31,7 @@ app.use(csp({
     defaultSrc: ["'self'"],
     styleSrc: ["'self'","'unsafe-inline'" ,'unpkg.com', 'cdn.jsdelivr.net', 
     'fonts.googleapis.com', 'use.fontawesome.com'],
-    scriptSrc: ["'self'","'unsafe-inline'",'cdn.jsdelivr.net', "'unsafe-eval'"],
+    scriptSrc: ["'self'","'unsafe-inline'",'cdn.jsdelivr.net', 'cdnjs.cloudflare.com', "'unsafe-eval'"],
     fontSrc:["'self'",'fonts.googleapis.com', 'fonts.gstatic.com'],
     imgSrc: ["'self'",'https:', 'data:']
   },

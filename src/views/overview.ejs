@@ -1,7 +1,82 @@
 <%- include('includes/head'); %>
   <% paginaAtual = 'overview' %> 
   <%- include('includes/sideBar'); %>
-
   
+  <div class="overview-container">
+    <div style="width: 100%">
+      <h1 class="overview-title">Overview</h1>
+      <h4 class="overview-subtitle">Tenha um resumo das suas finanças mensais aqui.</h4>
+    </div>
+    
+    <div class="registro-graph">
+      <h1 class="overview-registro-title">Registro Anual</h1>
+      <h4 class="overview-registro-subtitle">Aqui você pode ver os balanços dos ultimos 12 meses</h4>
+      <%- include('includes/graphRegistro'); %>
+    </div>
+    
+      <div class="historico-de-transacoes">
+        <h1 class="historico-title">Histórico de Transações</h1>
+        <div class="h-table">
+          <%- include('includes/tableHistory'); %>
+        </div>
+        
+      </div>
+    
+      <div class="limites">
+        <div class="limites-link">
+          <h1 class="limites-title">Limites</h1>
+          <a href=""></a>
+        </div>
+        <ul class="limites-card">
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 500</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 800</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 200</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="progressbar-limites">
+        <h1 class="pb-title">Até onde posso ir</h1>
+        <div class="top-1-limite">
+          <img src="/assets/img/icons/logo.svg" alt="">
+          <div>
+            <div class="top-1-bar"></div>
+            <p class="limite-subtitle">Eletronicos</p>
+          </div>
+          <p class="valor-limite">100%</p>
+        </div>
+        <div class="top-2-limite">
+          <img src="/assets/img/icons/logo.svg" alt="">
+          <div>
+            <div class="top-2-bar"></div>
+            <p class="limite-subtitle">Shopping</p>
+          </div>
+          <p class="valor-limite">100%</p>
 
-  <%- include('includes/footer') %>
+        </div>
+        <div class="top-3-limite">
+          <img src="/assets/img/icons/logo.svg" alt="">
+          <div>
+            <div class="top-3-bar"></div>
+            <p class="limite-subtitle">Viagens</p>
+          </div>
+          <p class="valor-limite">100%</p>
+        </div>
+      </div>
+    
+      <div class="btns-adicionar">
+        <div class="imagem-app">'</div>
+        <div class="btn-overview-despesa">Despesa</div>
+        <div class="btn-overview-receita">Receita</div>
+      </div>
+    </div>
+        
+<%- include('includes/footer') %>
