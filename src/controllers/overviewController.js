@@ -4,7 +4,7 @@ const Despesa = require('../models/despesaModel');
 exports.index = async(req,res) => {
   if(!req.params.id) res.render('404')
   try {
-    const receitas = await Receita.prototype.buscarReceitas();
+    const receitas = await Receita.prototype.buscarReceitas(req.session.user._id);
     res.render('overview', { receitas })
   } catch (error) {
     console.log(error)

@@ -17,14 +17,14 @@ class Transacao {
   constructor(body){
     this.body = body;
     this.errors = [];
-    this.despesa = null;
+    this.transacao = null;
   }
 
   async register(){
     this.validate()
 
     if(this.errors.length > 0) return;
-    this.despesa = await TransacaoModel.create(this.body)
+    this.transacao = await TransacaoModel.create(this.body)
   }
 
   async edit(id){
@@ -32,7 +32,7 @@ class Transacao {
 
     this.validate();
     if(this.errors.length > 0 ) return;
-    this.despesa = await TransacaoModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
+    this.transacao = await TransacaoModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
   }
 
   async buscarTransacaos(){

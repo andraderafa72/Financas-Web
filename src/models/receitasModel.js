@@ -34,8 +34,8 @@ class Receita {
     this.despesa = await ReceitaModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
   }
 
-  async buscarReceitas(){
-    const receita = await ReceitaModel.find().sort({data: -1})
+  async buscarReceitas(id){
+    const receita = await ReceitaModel.find({owner: id}).sort({data: -1})
     return receita
   }
 

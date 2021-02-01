@@ -40,6 +40,6 @@ exports.logged = (req, res, next) => {
 }
 
 exports.logout = (req, res) => {
-  req.session.destroy(); // destroy o session.user
+  req.session.destroy();
   res.redirect('/');
 }

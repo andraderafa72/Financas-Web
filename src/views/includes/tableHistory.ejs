@@ -9,7 +9,6 @@
 
   <% for(let receita of receitas) { 
      if(receita.owner === user._id) { %>
-      <% console.log(receita.owner, user._id) %>
       <tr>
         <td style="width: 5%; content: '';"></td>
         <td><%= receita.identificador %></td>
