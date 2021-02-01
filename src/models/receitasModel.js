@@ -58,11 +58,10 @@ class Receita {
         this.body[key] = '';
       }
 
-      
       this.body = {
         owner: this.body.owner,
         identificador: this.body.identificador,
-        valor: this.body.valor.replace(',', '.'),
+        valor: this.body.valor,
         data: this.body.data,
         categoria: this.body.categoria,
         icone: this.body.icone,
