@@ -6,14 +6,19 @@
     <th>Data</th>
     <th style="text-align: right;">Valor</th>
   </tr>
-  <% for(let receita of receitas) {  console.log(receita.data.toISOString());%>
-    <tr>
-      <td style="width: 5%; content: '';"></td>
-      <td><%= receita.identificador %></td>
-      <td><%= receita.categoria %></td>
-      <td><%= `${receita.data.getDate() + 1}/${receita.data.getMonth() + 1}/${receita.data.getFullYear()}` %></td>
-      <td style="text-align: right;"><%= `R$ ${receita.valor}` %></td>
-    </tr>
-    <% } %> 
+
+  <% for(let receita of receitas) { 
+     if(receita.owner === user._id) { %>
+      <% console.log(receita.owner, user._id) %>
+      <tr>
+        <td style="width: 5%; content: '';"></td>
+        <td><%= receita.identificador %></td>
+        <td><%= receita.categoria %></td>
+        <td><%= `${receita.data.getDate() + 1}/${receita.data.getMonth() + 1}/${receita.data.getFullYear()}` %></td>
+        <td style="text-align: right;"><%= `R$ ${receita.valor}` %></td>
+      </tr>
+
+    <% }
+   } %> 
   
 </table>

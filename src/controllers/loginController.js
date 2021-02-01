@@ -38,3 +38,8 @@ exports.logout = (req, res) =>{
 exports.logged = (req, res, next) => {
   res.render('logged')
 }
+
+exports.logout = (req, res) => {
+  req.session.destroy(); // destroy o session.user
+  res.redirect('/');
+}

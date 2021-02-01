@@ -38,6 +38,6 @@ route.get('/receitas/index', globalMiddleware.loginRequired, receitaController.i
 route.get('/receitas/registrar/index', globalMiddleware.loginRequired, receitaController.indexRegister);
 route.post('/receitas/registrar/index', globalMiddleware.loginRequired, receitaController.send);
 
-route.get('/overview/index', globalMiddleware.loginRequired, overviewController.index);
+route.get('/overview/index/:id', globalMiddleware.loginRequired, overviewController.index);
 
 module.exports = route;
