@@ -1,2 +1,4 @@
-# model-mvc
-Modelo MVC (models, views e controllers) com conexão MongoDB
+# Finaças
+A web app to manage your bills
+
+## Working on it
