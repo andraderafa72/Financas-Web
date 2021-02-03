@@ -95,6 +95,11 @@ input, .btn{
 }
 
 .btn-despesa{
+  background: var(--button-receita)!important;
+  color: white;
+}
+
+.btn-despesa{
   background: var(--button-despesa)!important;
   color: white;
 }
@@ -290,7 +295,7 @@ a.transacoes:hover img{
 }
 
 /* OVERVIEW */
-.overview-container{
+.app-container{
   max-height: 95vh;
   padding: 3.3333vh 2.5vw 1.51vh 2.5vw ;
   margin-left: 22vw;
