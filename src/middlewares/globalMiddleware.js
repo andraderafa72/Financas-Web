@@ -47,7 +47,6 @@ exports.chartData = async(req, res, next) => {
     const now = new Date();
     const minDate = new Date(now - (1000 * 60 * 60 * 24 * 30 * 12));
     const maxDate = new Date(now.getFullYear(), now.getMonth() + 2, now.getDate());
-    console.log(minDate, now , maxDate)
     const thisMonth = now.getUTCMonth();
     
     const chartMonths = [

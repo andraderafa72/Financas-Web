@@ -1,19 +1,25 @@
 <%- include('includes/head'); %>
 
   <section class="container">
-    <h1>Inicio</h1>
-    <h1>
-      <%= csrfToken %>
-    </h1>
-    <form action="/" method="post">
-      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-      <label>Nome</label>
-      <input type="text" name="nome" id="">
-      <button>Submit</button>
-    </form>
-    <% if(user){ %> 
-    <a href="/overview/index/<%= user._id %>">asdasd</a>
-    <% } %>
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6 my-5">
+        <% if(!user){ %> 
+        <h1 style="font-family: 'Poppins';">Seja bem vindo. Entre ou cadastre-se para continuar</h1>
+        <a href="/login/index" style="padding: 10px;">Login</a>
+        <a href="/register/index" style="padding: 10px;">Register</a>
+        <% } else {%>
+          <div style="margin-top: 15px;">
+            <h1 style="font-family: 'Poppins';">Seja bem vindo, <%= user.nome %> </h1>
+            <a href="/overview/index/<%= user._id %>" style="padding: 10px;">Overview</a>
+            <a href="/login/logout" class="logout-link" style="padding: 10px;">Sair</a>
+          </div>
+        <% }%>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+
+    
   </section>
 
   <%- include('includes/footer') %>
