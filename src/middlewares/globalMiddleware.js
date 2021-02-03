@@ -46,6 +46,8 @@ exports.chartData = async(req, res, next) => {
 
     const now = new Date();
     const minDate = new Date(now - (1000 * 60 * 60 * 24 * 30 * 12));
+    const maxDate = new Date(now.getFullYear(), now.getMonth() + 2, now.getDate());
+    console.log(minDate, now , maxDate)
     const thisMonth = now.getUTCMonth();
     
     const chartMonths = [
@@ -100,11 +102,11 @@ exports.chartData = async(req, res, next) => {
     ];
 
     for(let dado of valores){
-      if(dado.data < minDate) continue;
+      if(dado.data < minDate || dado.data > maxDate) continue;
       const data = new Date(dado.data);
       const mesDaTransacao = data.getMonth();
 
-      if(mesDaTransacao === thisMonth - 10){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 10)){
         if(dado.tipo === 'despesa') {
           chartMonths[0].valores.despesa += dado.valor
         } else {
@@ -112,7 +114,7 @@ exports.chartData = async(req, res, next) => {
         }
         continue;
       }
-      if(mesDaTransacao === thisMonth - 9){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 9)){
         if(dado.tipo === 'despesa') {
           chartMonths[1].valores.despesa += dado.valor
         } else {
@@ -120,7 +122,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 8){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 8)){
         if(dado.tipo === 'despesa') {
           chartMonths[2].valores.despesa += dado.valor
         } else {
@@ -128,7 +130,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 7){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 7)){
         if(dado.tipo === 'despesa') {
           chartMonths[3].valores.despesa += dado.valor
         } else {
@@ -136,7 +138,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 6){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 6)){
         if(dado.tipo === 'despesa') {
           chartMonths[4].valores.despesa += dado.valor
         } else {
@@ -144,7 +146,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 5){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 5)){
         if(dado.tipo === 'despesa') {
           chartMonths[5].valores.despesa += dado.valor
         } else {
@@ -152,7 +154,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 4){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 4)){
         if(dado.tipo === 'despesa') {
           chartMonths[6].valores.despesa += dado.valor
         } else {
@@ -160,7 +162,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 3){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 3)){
         if(dado.tipo === 'despesa') {
           chartMonths[7].valores.despesa += dado.valor
         } else {
@@ -168,7 +170,7 @@ exports.chartData = async(req, res, next) => {
         }        
         continue;
       }
-      if(mesDaTransacao === thisMonth - 2){
+      if(qualMesAPartirDoAtual(mesDaTransacao) === qualMesAPartirDoAtual(thisMonth - 2)){
         if(dado.tipo === 'despesa') {
           chartMonths[8].valores.despesa += dado.valor
         } else {

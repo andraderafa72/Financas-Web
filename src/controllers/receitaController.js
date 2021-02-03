@@ -22,7 +22,7 @@ exports.send = async(req, res, next) => {
 
     req.flash('success', 'Cadastrado com sucesso.');
     req.session.save(function () {
-      return res.redirect('back')
+      return res.redirect(`/overview/index/${req.session.user._id}`)
     });
   } catch (error) {
     console.log(error)
