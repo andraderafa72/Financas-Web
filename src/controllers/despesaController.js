@@ -1,4 +1,4 @@
-const Despesa = require('../models/despesaModel');
+const Transacao = require('../models/transacaoModel');
 
 exports.index = (req, res) => {
   res.render('despesas');
@@ -10,9 +10,8 @@ exports.indexRegister = (req, res) => {
 
 exports.send = async(req, res) => {
   try {
-    const despesa = new Despesa(req.body);
+    const despesa = new Transacao(req.body);
     await despesa.register();
-
     if(despesa.errors.length>0) {
       req.flash('errors', despesa.errors)
       req.session.save(function () {

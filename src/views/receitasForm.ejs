@@ -16,7 +16,7 @@
             <form class="my-3 " action="/receitas/registrar/index" method="POST">
               <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <input type="hidden" name="owner" value="<%= user._id %>">
-              <input type="hidden" name="tipo" value="despesa">
+              <input type="hidden" name="tipo" value="receita">
               <div class="form-group">
                 <label>Identificador:</label>
                 <input type="text" class="form-control" name="identificador" placeholder="Digite um identificador">

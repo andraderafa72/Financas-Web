@@ -4,14 +4,14 @@ const TransacaoSchema = new mongoose.Schema({
   owner: { type: String, required: true},
   identificador: { type: String, required:true },
   valor: { type: Number, required: true },
-  data: { type: Date, required: true },
+  data: { type: Date , required: true },
   categoria: { type: String, required: true },
   icone: { type: String, required: true },
   tipo: { type: String, required: true },
   pago: { type: Boolean, required: false },
 });
 
-const TransacaoModel = mongoose.model('Transacao', TransacaoSchema);
+const TransacaoModel = mongoose.model('Transações', TransacaoSchema);
 
 class Transacao {
   constructor(body){
@@ -35,11 +35,11 @@ class Transacao {
     this.transacao = await TransacaoModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
   }
 
-  async buscarTransacaos(){
-    const Transacao = await TransacaoModel.find().sort({data: -1})
-    return Transacao
+  async buscarTransacoes(id){
+    const transacao = await TransacaoModel.find({owner: id}).sort({data: -1})
+    return transacao;
   }
-
+  
   validate(){
     this.cleanUp();
 
@@ -66,6 +66,7 @@ class Transacao {
         data: this.body.data,
         categoria: this.body.categoria,
         icone: this.body.icone,
+        tipo: this.body.tipo,
         pago: this.body.pago,
       }
     }

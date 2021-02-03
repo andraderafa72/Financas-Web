@@ -1,4 +1,4 @@
-const Receita = require('../models/receitasModel');
+const Transacao = require('../models/transacaoModel');
 
 exports.index = (req, res) => {
   res.render('receitas');
@@ -9,7 +9,7 @@ exports.indexRegister = (req, res) => {
 
 exports.send = async(req, res, next) => {
   try {
-    const receita = new Receita(req.body);
+    const receita = new Transacao(req.body);
     await receita.register();
 
     if(receita.errors.length>0) {

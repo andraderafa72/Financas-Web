@@ -40,4 +40,6 @@ route.post('/receitas/registrar/index', globalMiddleware.loginRequired, receitaC
 
 route.get('/overview/index/:id', globalMiddleware.loginRequired, overviewController.index);
 
+route.get('/api/overview/chart',  globalMiddleware.loginRequired, globalMiddleware.chartData)
+
 module.exports = route;

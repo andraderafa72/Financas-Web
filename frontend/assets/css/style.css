@@ -375,6 +375,18 @@ a.transacoes:hover img{
   max-height: 35px
 }
 
+.tipo-transacao-receita{
+  color: #27DD9B;
+}
+.tipo-transacao-despesa{
+  color: #E52D27;
+}
+.tipo-transacao-despesa,
+.tipo-transacao-receita{
+  text-align: right;
+  font-weight: bold;
+}
+
 .historico-table th{
   font-family: 'Ubuntu';
   font-size: 12px;

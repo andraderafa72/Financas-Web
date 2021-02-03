@@ -7,17 +7,29 @@
     <th style="text-align: right;">Valor</th>
   </tr>
 
-  <% for(let receita of receitas) { 
-     if(receita.owner === user._id) { %>
+  <% for(let transacao of transacoes) { %>
+    <% if(transacao.owner === user._id) { %>
       <tr>
         <td style="width: 5%; content: '';"></td>
-        <td><%= receita.identificador %></td>
-        <td><%= receita.categoria %></td>
-        <td><%= `${receita.data.getDate() + 1}/${receita.data.getMonth() + 1}/${receita.data.getFullYear()}` %></td>
-        <td style="text-align: right;"><%= `R$ ${receita.valor}` %></td>
-      </tr>
+        <td><%= transacao.identificador %></td>
+        <td><%= transacao.categoria %></td>
 
-    <% }
-   } %> 
-  
+        <% 
+          const dataD = new Date(transacao.data.getDate(), transacao.data.getMonth(), transacao.data.getFullYear());
+          if(dataD > new Date() && transacao.tipo === 'despesa') {
+        %>
+        <td style="color: red;"><%= `${transacao.data.getDate() + 1}/${transacao.data.getMonth() + 1}/${transacao.data.getFullYear()}` %></td>
+        <% } else{ %>
+        <td><%= `${transacao.data.getDate() + 1}/${transacao.data.getMonth() + 1}/${transacao.data.getFullYear()}` %></td>
+        <% } %>
+        
+        <% if(transacao.tipo === 'despesa') { %>
+        <td class="tipo-transacao-despesa"><%= `R$ ${transacao.valor}` %></td>
+        <% } else if(transacao.tipo ==='receita'){ %>
+          <td class="tipo-transacao-receita"><%= `R$ ${transacao.valor}` %></td>
+        <% } %>
+      </tr>   
+    <% } %>
+  <% } %>  
+
 </table>
