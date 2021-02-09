@@ -15,7 +15,7 @@ exports.send = async(req, res, next) => {
     if(receita.errors.length>0) {
       req.flash('errors', receita.errors)
       req.session.save(function () {
-        return res.redirect('/receita/index');
+        return res.redirect('/receitas/registrar/index');
       });
       return;
     }

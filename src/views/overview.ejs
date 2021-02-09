@@ -8,26 +8,28 @@
       <h1 class="overview-title">Overview</h1>
       <h4 class="overview-subtitle">Tenha um resumo das suas finanças mensais aqui.</h4>
     </div>
-    
-    <div class="registro-graph">
-      <h1 class="overview-registro-title">Registro Anual</h1>
-      <h4 class="overview-registro-subtitle">Aqui você pode ver os balanços dos ultimos 12 meses</h4>
-      <%- include('includes/graphRegistro'); %>
-    </div>
+    <div class="overview-container">
+    <div class="left-overview">
+      <div class="registro-graph">
+        <h1 class="overview-registro-title">Registro Anual</h1>
+        <h4 class="overview-registro-subtitle">Aqui você pode ver os balanços dos ultimos 12 meses</h4>
+        <%- include('includes/graphRegistro'); %>
+      </div>
     
       <div class="historico-de-transacoes">
         <h1 class="historico-title">Histórico de Transações</h1>
         <div class="h-table">
           <%- include('includes/tableHistory'); %>
         </div>
-        
       </div>
-    
+    </div> 
+
+    <div class="right-overview">
+      <div class="limites-link">
+        <h1 class="limites-title">Limites</h1>
+        <a href=""></a>
+      </div>
       <div class="limites">
-        <div class="limites-link">
-          <h1 class="limites-title">Limites</h1>
-          <a href=""></a>
-        </div>
         <ul class="limites-card">
           <li class="card-limite">
             <h2 class="valor-limite">R$ 500</h2>
@@ -35,6 +37,26 @@
           </li>
           <li class="card-limite">
             <h2 class="valor-limite">R$ 800</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 200</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 200</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 200</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 200</h2>
+            <p class="data-limite">20/12/2021</p>
+          </li>
+          <li class="card-limite">
+            <h2 class="valor-limite">R$ 200</h2>
             <p class="data-limite">20/12/2021</p>
           </li>
           <li class="card-limite">
@@ -73,11 +95,12 @@
         </div>
       </div>
     
-      <div class="btns-adicionar">
-        <div class="imagem-app">'</div>
-        <a href="/despesas/registrar/index" class="btn-overview-despesa">Despesa <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
-        <a href="/receitas/registrar/index" class="btn-overview-receita">Receita  <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
+        <div class="btns-adicionar">
+          <a href="/despesas/registrar/index" class="btn-overview-despesa">Despesa <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
+          <a href="/receitas/registrar/index" class="btn-overview-receita">Receita  <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
+        </div>
+
       </div>
-    </div>
-        
+    </div>   
+  </div> 
 <%- include('includes/footer') %>

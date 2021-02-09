@@ -112,3 +112,9 @@ const url = 'http://localhost:5500/api/overview/chart';
     .catch( function(error){
       console.log(error)
     })  
+
+
+$(".burger-squeeze").click(function(){  
+  $(".burger-squeeze").toggleClass("open");  
+  $(".side-bar").toggleClass("toggler") 
+});  

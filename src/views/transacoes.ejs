@@ -8,5 +8,80 @@
       <h1 class="overview-title">Transações</h1>
       <h4 class="overview-subtitle" style="margin-top: 15px;">Veja seu histórico de transações aqui.</h4>
     </div>
+
+    <div class="transacao-container">
+      <div class="transacao-container-top">
+        <div class="balanco-mensal">
+          <h2 class="balanco-mensal-h2">Balanço mensal</h2>
+          <h1 class="valor-balanco-mensal">123</h1>
+        </div>
+        <div class="meu-dinheiro">
+          <h2 class="meu-dinheiro-h2">Meu dinheiro</h2>
+          <h1 class="valor-meu-dinheiro">123</h1>
+        </div>
+        <div class="media-despesas-mensais">
+          <h2 class="despesas-mensais-h2 red">Média de despesas mensais</h2>
+          <h1 class="valor-despesas-mensais">123</h1>
+        </div>
+        <div class="media-receitas-mensais">
+          <h2 class="despesas-mensais-h2 green">Média de receitas mensais</h2>
+          <h1 class="valor-receitas-mensais">123</h1>
+        </div>
+      </div>
+
+      <div class="transacao-container-mid">
+        <% 
+          let receitas = 0;
+          let despesas = 0;
+          for(let transacao of transacoes){
+            if(transacao.tipo === 'receita') receitas += 1;
+            if(transacao.tipo === 'despesa') despesas += 1;
+          } 
+        %> 
+
+        <div class="total-transacoes">
+          <p class="total-transacoes">Total de transações: <%= transacoes.length %> </p>
+          <p class="total-transacoes">Total de receitas: <%= receitas %> </p>
+          <p class="total-transacoes">Total de despesas: <%= despesas %> </p>
+        </div>
+        
+        <div class="select-transacoes">
+          <p>Transações no(s) ultimo(s):</p>
+          <select name="meses" id="meses">
+            <option value="ultimo-mes">Mês</option>
+            <option value="ultimos-3-meses">3 Meses</option>
+            <option value="ultimos-6-meses">6 meses</option>
+            <option value="ultimos-1-ano">1 ano</option>
+            <option value="ultimos-1-ano-3-meses">1 ano e 6 meses</option>
+            <option value="ultimos-2-anos">2 anos</option>
+          </select>
+        </div>
+        
+      </div>
+
+      <div class="transacao-container-bottom">
+        <div class="tabela-transacoes">
+          <table>
+            <thead>
+              <tr>
+                <th>Identificação</th>
+                <th>Icone</th>
+                <th>Categoria</th>
+                <th>Data</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody class="tabela-de-transacoes">
+              <%- include('includes/tableTransacoes') %> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="transacoes-buttons">
+        <a href="/despesas/registrar/index" class="btn-transacoes-despesa">Despesa <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
+        <a href="/receitas/registrar/index" class="btn-transacoes-receita">Receita  <img class="plus-overview" src="/assets/img/icons/Plus.svg" alt=""></a>
+      </div>
+    </div>
   </section>
 <%- include('includes/footer') %>

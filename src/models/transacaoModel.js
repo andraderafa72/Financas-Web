@@ -43,8 +43,12 @@ class Transacao {
   validate(){
     this.cleanUp();
 
-    if(!this.isNumber(this.body.valor)) {
-      this.errors.push('Digite um valor válido.')
+    if(!this.isNumber(this.body.valor) && this.body.valor < 0) {
+      this.errors.push('Digite valores válidos.')
+      return;
+    }
+    if(this.body.tipo === 'receita' && this.body.pago){
+      this.errors.push('Não é possivel pagar uma receita a si mesmo.')
       return;
     }
    }

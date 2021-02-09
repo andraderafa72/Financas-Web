@@ -1,10 +1,52 @@
 const Transacao = require('../models/transacaoModel');
 
+const now = new Date();
+const thisMonth = now.getUTCMonth();
+const meses = [
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 10),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 9),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 8),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 7),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 6),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 5),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 4),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 3),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 2),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth - 1),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth),
+  },
+  {
+    mes: qualMesAPartirDoAtual(thisMonth + 1),
+  },
+];
+
 // EXECUTADOS AO INICIAR
 exports.errorVariable = (req, res, next) =>{
   res.locals.erros = req.flash('errors');
   res.locals.success = req.flash('success');
   res.locals.user = req.session.user;
+  res.locals.meses = meses;
   res.locals.paginaAtual = '';
   res.locals.paginaAnterior = '';
   next();
@@ -42,60 +84,56 @@ exports.chartData = async(req, res, next) => {
       valores.push({data, valor: transacao.valor, tipo: transacao.tipo})
     }
 
-
-
-    const now = new Date();
     const minDate = new Date(now - (1000 * 60 * 60 * 24 * 30 * 12));
     const maxDate = new Date(now.getFullYear(), now.getMonth() + 2, now.getDate());
-    const thisMonth = now.getUTCMonth();
     
     const chartMonths = [
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 10),
+        mes: meses[0].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 9),
+        mes:  meses[1].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 8),
+        mes:  meses[2].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 7),
+        mes:  meses[3].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 6),
+        mes:  meses[4].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 5),
+        mes: meses[5].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 4),
+        mes: meses[6].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 3),
+        mes:  meses[7].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 2),
+        mes:  meses[8].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth - 1),
+        mes:  meses[9].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth),
+        mes:  meses[10].mes,
         valores: {receita: 0, despesa: 0}
       },
       {
-        mes: qualMesAPartirDoAtual(thisMonth + 1),
+        mes:  meses[11].mes,
         valores: {receita: 0, despesa: 0}
       },
     ];

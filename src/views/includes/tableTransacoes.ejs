@@ -1,0 +1,30 @@
+  <% for(let transacao of transacoes) { %>
+    <% if(transacao.owner === user._id) { %>
+      <% if(transacao.tipo === 'despesa') { %>
+        <tr class="despesa">
+          <td class=" first-transacoes red"><%= transacao.identificador %></td>
+          <% } else if(transacao.tipo ==='receita'){ %>
+          <tr class="receita">
+            <td class=" first-transacoes green"><%= transacao.identificador %></td>
+          <% } %>
+          <td id="icon"><%= transacao.icone %></td>
+        <td><%= transacao.categoria %></td>
+
+        <% 
+          const dataD = new Date(transacao.data.getDate(), transacao.data.getMonth(), transacao.data.getFullYear());
+          if(dataD > new Date() && transacao.tipo === 'despesa') {
+        %>
+        <td style="color: red;"><%= `${transacao.data.getDate() + 1}/${transacao.data.getMonth() + 1}/${transacao.data.getFullYear()}` %></td>
+        <% } else{ %>
+        <td><%= `${transacao.data.getDate() + 1}/${transacao.data.getMonth() + 1}/${transacao.data.getFullYear()}` %></td>
+        <% } %>
+        
+        <% if(transacao.tipo === 'despesa') { %>
+        <td class="tipo-transacao-despesa last-transacoes red"><%= `R$ ${transacao.valor}` %></td>
+        <% } else if(transacao.tipo ==='receita'){ %>
+          <td class="tipo-transacao-receita last-transacoes green"><%= `R$ ${transacao.valor}` %></td>
+        <% } %>
+      </tr>   
+    <% } %>
+  <% } %>  
+

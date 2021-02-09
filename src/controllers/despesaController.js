@@ -15,7 +15,7 @@ exports.send = async(req, res) => {
     if(despesa.errors.length>0) {
       req.flash('errors', despesa.errors)
       req.session.save(function () {
-        return res.redirect('/despesas/index');
+        return res.redirect('/despesas/registrar/index/');
       });
       return;
     }
