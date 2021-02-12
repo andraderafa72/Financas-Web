@@ -41,7 +41,7 @@ route.post('/receitas/registrar/index', globalMiddleware.loginRequired, receitaC
 
 route.get('/overview/index/:id', globalMiddleware.loginRequired, overviewController.index);
 
-route.get('/transacoes/index/:id', globalMiddleware.loginRequired, transacoesController.index);
+route.get('/transacoes/index/:id', globalMiddleware.loginRequired, globalMiddleware.exportarDados, transacoesController.index);
 
 route.get('/api/overview/chart',  globalMiddleware.loginRequired, globalMiddleware.chartData)
 

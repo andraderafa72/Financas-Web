@@ -13,19 +13,19 @@
       <div class="transacao-container-top">
         <div class="balanco-mensal">
           <h2 class="balanco-mensal-h2">Balanço mensal</h2>
-          <h1 class="valor-balanco-mensal">123</h1>
+          <h1 class="valor-balanco-mensal"></h1>
         </div>
         <div class="meu-dinheiro">
           <h2 class="meu-dinheiro-h2">Meu dinheiro</h2>
-          <h1 class="valor-meu-dinheiro">123</h1>
+          <h1 class="valor-meu-dinheiro"></h1>
         </div>
         <div class="media-despesas-mensais">
           <h2 class="despesas-mensais-h2 red">Média de despesas mensais</h2>
-          <h1 class="valor-despesas-mensais">123</h1>
+          <h1 class="valor-despesas-mensais"></h1>
         </div>
         <div class="media-receitas-mensais">
           <h2 class="despesas-mensais-h2 green">Média de receitas mensais</h2>
-          <h1 class="valor-receitas-mensais">123</h1>
+          <h1 class="valor-receitas-mensais"></h1>
         </div>
       </div>
 
@@ -46,19 +46,17 @@
         </div>
         
         <div class="select-transacoes">
-          <p>Transações no(s) ultimo(s):</p>
+          <p>Transações no(s):</p>
           <select name="meses" id="meses">
-            <option value="ultimo-mes">Mês</option>
-            <option value="ultimos-3-meses">3 Meses</option>
-            <option value="ultimos-6-meses">6 meses</option>
-            <option value="ultimos-1-ano">1 ano</option>
-            <option value="ultimos-1-ano-3-meses">1 ano e 6 meses</option>
-            <option value="ultimos-2-anos">2 anos</option>
+            <option value="todas">Todas as transações</option>
+            <option value="ultimo-mes">Ultimo Mês</option>
+            <option value="ultimos-3-meses">Ultimos 3 Meses</option>
+            <option value="ultimos-6-meses">Ultimos 6 meses</option>
+            <option value="ultimos-1-ano">Ultimos 1 ano</option>
           </select>
         </div>
         
       </div>
-
       <div class="transacao-container-bottom">
         <div class="tabela-transacoes">
           <table>
@@ -68,7 +66,8 @@
                 <th>Icone</th>
                 <th>Categoria</th>
                 <th>Data</th>
-                <th>Valor</th>
+                <th style="text-align: right;">Valor</th>
+                <th>Ações</th>
               </tr>
             </thead>
             <tbody class="tabela-de-transacoes">

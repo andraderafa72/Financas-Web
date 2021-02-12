@@ -20,9 +20,11 @@
         <% } %>
         
         <% if(transacao.tipo === 'despesa') { %>
-        <td class="tipo-transacao-despesa last-transacoes red"><%= `R$ ${transacao.valor}` %></td>
+          <td class="tipo-transacao-despesa"><%= `R$ ${transacao.valor}` %></td>
+          <td class=" last-transacoes red">editar</td>
         <% } else if(transacao.tipo ==='receita'){ %>
-          <td class="tipo-transacao-receita last-transacoes green"><%= `R$ ${transacao.valor}` %></td>
+          <td class="tipo-transacao-receita "><%= `R$ ${transacao.valor}` %></td>
+          <td class=" last-transacoes green">editar</td>
         <% } %>
       </tr>   
     <% } %>

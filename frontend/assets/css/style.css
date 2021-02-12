@@ -18,6 +18,23 @@
 
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(203,203,203); 
+}
+
+::-webkit-scrollbar-track-piece  { 
+  background: rgb(237,237,237); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
 a{text-decoration: none!important;}
 
 ul, nav{
@@ -199,6 +216,17 @@ option{
   background-color: #363740;
   color:#A4A6B3; 
   border-radius: 0 28px 28px 0;
+  z-index: 1;
+}
+
+.background-sidebar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .side-bar-header{
@@ -576,11 +604,12 @@ td{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: center;
 }
 
 .btn-transacoes-despesa,
 .btn-transacoes-receita{
-  padding: 8px 50px;
+  padding: 8px 15px 8px 20px!important;
 }
 
 .btn-overview-despesa,
@@ -600,35 +629,48 @@ td{
   opacity: 0.9;
 }
 
+.transacoes-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-transacoes-despesa{
+  width: 48%;
+  background: var(--button-despesa);
+}
+.btn-transacoes-receita{
+  width: 48%;
+  background: var(--button-receita);
+}
+
 .btn-overview-despesa{
   width: 100%;
   height: 9vh;
   background: var(--button-despesa);
-  color: #F7F8FC;
-
 }
+
 .btn-overview-receita{
   width: 100%;
   height: 9vh;
   margin-top: 15px;
   background: var(--button-receita);
-  color: #F7F8FC;
 }
 
-.btn-overview-receita:hover{
+.btn-overview-receita:hover, .btn-overview-despesa:hover{
   transition: .4s;
   opacity: 1;
 }
 
-.btn-overview-despesa:hover{
-  transition: .4s;
-  opacity: 1; 
+.plus-overview{
+  position: relative;
+  top: calc(50% - 13px);
+  left: 35%;
 }
 
-.plus-overview{
-  position: absolute;
-  top: calc(50% - 13px);
-  right: 26px;
+.btn-overview-despesa .plus-overview,
+.btn-overview-receita .plus-overview{
+  top: calc(25% - 13px);
 }
 
 /* TRANSAÇÕES PAGE */
@@ -643,13 +685,14 @@ td{
 }
 
 .transacao-container-mid select{
-  max-width: 150px;
+  max-width: 250px;
+  font-size: 13px;
   height: 80%;
   margin: 0 10px 0 15px;
   border-color: rgba(159, 162, 180,.3);
 }
 .transacao-container-mid p{margin: 0;}
-.transacao-container-mid .select-transacoes p{font-size: 14px;}
+.transacao-container-mid .select-transacoes p{font-size: 14px; min-width: 130px;}
 
 .transacao-container-mid .select-transacoes{
   display: flex;
@@ -662,22 +705,25 @@ td{
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
   box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
 }
 
 .transacao-container-bottom{
   border-radius: 28px;
   min-height: 50vh;
-  filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.06)), drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)), drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+  margin-top: 15px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
-
 .tabela-transacoes{
+  width: 100%;
   box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
-  display: flex;
   border-radius: 28px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  max-height:50vh!important;
+  overflow-y: auto;
 }
 
 .tabela-transacoes table{
@@ -791,6 +837,9 @@ td{
   .limites{
     width: 95vw;
     height: 100%;
+  }
+  .plus-overview{
+    left: 25%;
   }
 }
 
