@@ -7,7 +7,6 @@ import './assets/css/style.css';
 import './assets/modules/overviewChart';
 import './assets/modules/transacoes';
 
-
 // JQUERY
 $(".burger-squeeze").click(function(){  
   $(".burger-squeeze").toggleClass("open");  
