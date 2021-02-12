@@ -11,45 +11,41 @@
           <!-- ICONE -->
           <td id="icon">
             <% 
-              for(let i = 0; i<10; i++){
-                switch(transacao.icon){
-                  case 'salario':%> 
-                    <img src="./assets/img/icons/transacoes-icons/salario.svg" onload="SVGInject(this)" alt="">
-                   <% break;
-                  case 'red-person':%>
-                    <img src="./assets/img/icons/transacoes-icons/red-person.svg" onload="SVGInject(this)" alt="">
-                   <% break;
-                  case 'games':%>
-                  <img src="./assets/img/icons/transacoes-icons/games.svg" onload="SVGInject(this)" alt="">
+                if(transacao.icone === "salario") { %>
+                  <img src="/assets/img/icons/transacoes-icons/salario.svg" loading="lazy" alt="">
+                <% } %>
 
-                   <% break;
-                  case 'travels':%>
-                  <img src="./assets/img/icons/transacoes-icons/travels.svg" onload="SVGInject(this)" alt="">
+                <% if(transacao.icone === "red-person") { %>
+                  <img src="/assets/img/icons/transacoes-icons/red-person.svg" loading="lazy" alt="">
+                <% } %>
 
-                   <% break;
-                  case 'mercado':%>
-                  <img src="./assets/img/icons/transacoes-icons/mercado.svg" onload="SVGInject(this)" alt="">
+                <% if(transacao.icone === "games") { %>
+                  <img src="/assets/img/icons/transacoes-icons/games.svg" loading="lazy" alt="">
+                <% } %>
 
-                   <% break;
-                  case 'painting':%>
-                  <img src="./assets/img/icons/transacoes-icons/painting.svg" onload="SVGInject(this)" alt="">
+                <% if(transacao.icone === "travels") { %>
+                  <img src="/assets/img/icons/transacoes-icons/travels.svg" loading="lazy" alt="">
+                <% } %>
 
-                   <% break;
-                  case 'etiqueta':%>
-                  <img src="./assets/img/icons/transacoes-icons/etiqueta.svg" onload="SVGInject(this)" alt="">
+                <% if(transacao.icone === "mercado") { %>
+                  <img src="/assets/img/icons/transacoes-icons/mercado.svg" loading="lazy" alt="">
+                <% } %>
 
-                   <% break;
-                  case 'lazer':%>
-                  <img src="./assets/img/icons/transacoes-icons/lazer.svg" onload="SVGInject(this)" alt="">
+                <% if(transacao.icone === "painting") { %>
+                  <img src="/assets/img/icons/transacoes-icons/painting.svg" loading="lazy" alt="">
+                <% } %>
 
-                   <% break;
-                  case 'heart':%>
-                  <img src="./assets/img/icons/transacoes-icons/heart.svg" onload="SVGInject(this)" alt="">
-                  <% break;
-                }
-              }
-              %> 
+                <% if(transacao.icone === "etiqueta") { %>
+                  <img src="/assets/img/icons/transacoes-icons/etiqueta.svg" loading="lazy" alt="">
+                <% } %>
 
+                <% if(transacao.icone === "lazer") { %>
+                  <img src="/assets/img/icons/transacoes-icons/lazer.svg" loading="lazy" alt="">
+                <% } %>
+
+                <% if(transacao.icone === "heart") { %>
+                  <img src="/assets/img/icons/transacoes-icons/heart.svg" loading="lazy" alt="">
+                <% } %>
           </td>
         <td><%= transacao.categoria %></td>
 

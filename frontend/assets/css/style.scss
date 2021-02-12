@@ -1,0 +1,92 @@
+@import './partials/_colors';
+@import './partials/_buttons';
+@import './partials/_overview';
+@import './partials/_sidebar';
+
+* {
+  box-sizing: border-box;
+  outline: 0; 
+  margin: 0;
+  padding: 0;
+
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(203,203,203); 
+}
+
+::-webkit-scrollbar-track-piece  { 
+  background: rgb(237,237,237); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+a{text-decoration: none!important;}
+
+ul, nav{
+  list-style: none;
+}
+
+body {
+  background-color: $body-background-color;
+  font-family: 'Poppins';
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.app-container{
+  max-height: 95vh;
+  padding: 3.3333vh 2.5vw 1.51vh 2.5vw ;
+  margin-left: 22vw;
+}
+
+/* @MEDIA */
+@media(max-width:992px){
+  .historico-de-transacoes,.registro-graph{
+    width: 95vw;  
+    height: 100%;
+    margin-top: 15px;
+  }
+  .chart-registro{width: 100%;max-height: 100%;}
+  .left-overview,.right-overview{height: 100%;}
+  .right-overview{margin-top: 15px;}
+
+  .progressbar-limites{margin: 25px 0; width: 94vw;} 
+  .top-1-bar,
+  .top-2-bar,
+  .top-3-bar{
+    min-width: 75vw;
+  }
+
+  .limites{
+    width: 95vw;
+    height: 100%;
+  }
+  .plus-overview{
+    left: 25%;
+  }
+}
+
+@media(max-width:1280px){
+  .header{
+    display: block;
+  }
+  .side-bar{
+    left: -255px;
+    transition: .4s;
+  }
+  .toggler{
+    left: 0!important;
+  }
+  .app-container{
+    padding: 2vh 2vw;
+    margin-left: 0;
+  }
+  }

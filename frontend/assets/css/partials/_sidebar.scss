@@ -1,0 +1,135 @@
+/* SIDEBAR */
+.side-bar{
+  position: absolute;
+  float: left;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 255px;
+  width: 20vw;
+  background-color: #363740;
+  color:#A4A6B3; 
+  border-radius: 0 28px 28px 0;
+  z-index: 1;
+
+  .side-bar-header{
+    height: 116px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    
+    h1{
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      letter-spacing: 0.05rem;
+      color: #A4A6B3;
+      opacity: 0.7;
+      margin: 0 10px;
+    }
+  }
+
+  .side-bar-links{
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(223, 224, 235, .2);
+    
+    nav li{
+      max-height: 56px;
+      padding-left: 24px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+
+      a{
+        color: #A4A6B3;
+      }
+
+      &.active a *{
+        color: #DDE2FF;
+        fill: #DDE2FF;
+        opacity: 1;
+      }
+
+      &:hover {
+        background-color: rgba(159, 162, 180,.3);
+        border-left: 3px solid  #9FA2B4;
+        transition: .2s;
+
+        a, a *, a img{
+          color: #DDE2FF;
+          fill: #DDE2FF;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .side-bar-footer{
+    nav{
+      li{
+        max-height: 56px;
+        padding-left: 24px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        a svg, a img{
+          margin-right: 8px;
+        }
+        
+        .logout-link{
+          text-decoration: none;
+          color: rgba(255, 0, 0, .7)!important;
+
+          &:hover{
+            color:red!important;
+            transition: .4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.background-sidebar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+a.transacoes:hover img{
+  opacity: 1;
+}
+
+.side-bar-links nav li.active{
+  cursor: default;
+  background-color: rgba(159, 162, 180,.3);
+  border-left: 3px solid  #9FA2B4;
+}
+
+.side-bar-links nav li a:hover .logout-link:hover{
+  text-decoration: none;
+}
+.side-bar-links nav li a, .side-bar-footer nav li a{
+  padding: 15px 110px 15px 0;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.header{
+  display: none;
+  width: 100%;
+  padding: 10px;
+  background-color: #41424d;
+}
