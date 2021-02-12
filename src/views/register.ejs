@@ -1,5 +1,4 @@
 <%- include('includes/head'); %>
-<%- include('includes/messages'); %>
   <div class="container">
     <div class="row">
       <div class="col-lg-3"></div>
@@ -14,6 +13,7 @@
             <p class="welcome-2">Conecte-se para continuar.</p> 
           </div>
           <section class="form">
+            <%- include('includes/messages'); %>
             <h1 class="title-login text-left">Registrar-se</h1>
             <form class="my-3 " action="/register/index" method="POST">
               <input type="hidden" name="_csrf" value="<%= csrfToken %>">

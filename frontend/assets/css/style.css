@@ -99,8 +99,12 @@ p.welcome, p.welcome-2{
   box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
 }
 
+.alert-danger{
+  font-size: 14px;
+}
+
 .form-group label{
-  margin-top: 5px;
+  margin: 5px 0;
 }
 
 input, .btn{
@@ -160,7 +164,6 @@ input, .btn{
 
 .form{
   margin: 24px 24px;
-
 }
 
 .txt-register{
@@ -203,7 +206,22 @@ option{
   border-radius: 28px;
   padding: 6px 12px;
 }
-
+input.form-control[type="radio"]{
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+input[value="salario"]{background-image: url('/assets/img/icons/transacoes-icons/salario.svg');}
+input[value="red-person"]{background-image: url('/assets/img/icons/transacoes-icons/red-person.svg');}
+input[value="games"]{background-image: url('/assets/img/icons/transacoes-icons/games.svg');}
+input[value="travels"]{background-image: url('/assets/img/icons/transacoes-icons/travels.svg');}
+input[value="mercado"]{background-image: url('/assets/img/icons/transacoes-icons/mercado.svg');}
+input[value="painting"]{background-image: url('/assets/img/icons/transacoes-icons/painting.svg');}
+input[value="etiqueta"]{background-image: url('/assets/img/icons/transacoes-icons/etiqueta.svg');}
+input[value="lazer"]{background-image: url('/assets/img/icons/transacoes-icons/lazer.svg');}
+input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/heart.svg');}
 /* SIDEBAR */
 .side-bar{
   position: absolute;
