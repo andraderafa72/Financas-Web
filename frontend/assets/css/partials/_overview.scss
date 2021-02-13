@@ -125,7 +125,7 @@
 
       // Icone
       .historico-table-icon {
-        width: 7%;
+        width: 10%;
         font-size: 10px;
         text-align: center;
         padding: 5px 0;
@@ -139,8 +139,9 @@
       .historico-table-id {
         font-family: 'Ubuntu';
         font-size: 14px;
+        font-weight: bold;
         line-height: 16px;
-        color: #404040;
+        color: #464343;
       }
 
       // Categoria e data
@@ -149,6 +150,7 @@
         font-family: 'Ubuntu';
         font-size: 12px;
         line-height: 14px;
+        font-weight: bold;
         color: #C7C7C7;
       }
 

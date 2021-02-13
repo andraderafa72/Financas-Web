@@ -242,7 +242,7 @@
 }
 
 .h-table .historico-table tr .historico-table-icon {
-  width: 7%;
+  width: 10%;
   font-size: 10px;
   text-align: center;
   padding: 5px 0;
@@ -256,8 +256,9 @@
 .h-table .historico-table tr .historico-table-id {
   font-family: 'Ubuntu';
   font-size: 14px;
+  font-weight: bold;
   line-height: 16px;
-  color: #404040;
+  color: #464343;
 }
 
 .h-table .historico-table tr .historico-table-tipo,
@@ -265,6 +266,7 @@
   font-family: 'Ubuntu';
   font-size: 12px;
   line-height: 14px;
+  font-weight: bold;
   color: #C7C7C7;
 }
 
@@ -410,6 +412,232 @@
   font-size: 23.9789px;
   line-height: 50%;
   color: #696969;
+}
+
+/* TRANSAÇÕES PAGE */
+.transacao-container {
+  width: 100%;
+  border-radius: 28px;
+}
+
+.transacao-container .transacao-container-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.transacao-container .transacao-container-top .media-despesas-mensais,
+.transacao-container .transacao-container-top .media-receitas-mensais,
+.transacao-container .transacao-container-top .balanco-mensal,
+.transacao-container .transacao-container-top .meu-dinheiro {
+  width: 24%;
+  height: 75px;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+          box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.transacao-container .transacao-container-top div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.transacao-container .transacao-container-top div h1 {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 90%;
+  margin: 0;
+}
+
+.transacao-container .transacao-container-top div h2 {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.transacao-container .transacao-container-top div h2.red, .transacao-container .transacao-container-top div h1.red {
+  color: #db0000;
+}
+
+.transacao-container .transacao-container-top div h2.green, .transacao-container .transacao-container-top div h1.green {
+  color: #27dd9b;
+}
+
+.transacao-container .transacao-container-mid {
+  padding: 5px 10px;
+  border-radius: 28px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+          box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+}
+
+.transacao-container .transacao-container-mid .total-transacoes {
+  font-size: 12px;
+  margin-left: 7px !important;
+}
+
+.transacao-container .transacao-container-mid .transacao-container-mid select {
+  max-width: 250px;
+  font-size: 13px;
+  height: 80%;
+  margin: 0 10px 0 15px;
+  border-color: rgba(159, 162, 180, 0.3);
+}
+
+.transacao-container .transacao-container-mid p {
+  margin: 0;
+}
+
+.transacao-container .transacao-container-mid .select-transacoes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.transacao-container .transacao-container-mid .select-transacoes p {
+  font-size: 14px;
+  min-width: 130px;
+}
+
+.transacao-container .transacao-container-bottom {
+  border-radius: 28px;
+  min-height: 50vh;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.tabela-transacoes {
+  width: 100%;
+  -webkit-box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+          box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+  border-radius: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 50vh !important;
+  overflow-y: auto;
+}
+
+.tabela-transacoes table {
+  margin: 15px 0;
+  width: 95%;
+  text-align: center;
+}
+
+.tabela-transacoes table thead tr :first-child {
+  border-left: 5px solid #00A0FF;
+}
+
+.tabela-transacoes table thead tr :last-child {
+  border-right: 5px solid #00A0FF;
+}
+
+.tabela-transacoes table thead tr * {
+  border-bottom: 2.5px solid #00A0FF;
+}
+
+.tabela-transacoes table thead tr th {
+  padding: 8px 10px;
+  background-color: white;
+  border-left: 4px solid rgba(202, 203, 204, 0.3);
+  margin: 15px 0;
+}
+
+.tabela-transacoes table tbody tr :first-child {
+  border-left: 0;
+}
+
+.tabela-transacoes table tbody tr :nth-child(5) {
+  text-align: right;
+}
+
+.tabela-transacoes table tbody tr :last-child {
+  text-align: right;
+}
+
+.tabela-transacoes table tbody tr.despesa * {
+  border-bottom: 1px solid rgba(229, 45, 39, 0.2);
+}
+
+.tabela-transacoes table tbody tr.receita * {
+  border-bottom: 1px solid rgba(39, 221, 155, 0.2);
+}
+
+.tabela-transacoes table tbody tr td {
+  padding: 8px 10px;
+  background-color: white;
+  border-left: 4px solid rgba(202, 203, 204, 0.3);
+  margin: 15px 0;
+}
+
+.tabela-transacoes table tbody tr td#icon {
+  width: 5%;
+}
+
+.tabela-transacoes table tbody tr td#icon img {
+  border: none;
+}
+
+.tabela-transacoes table tbody tr td.first-transacoes.green {
+  border-left: 5px solid #27dd9b;
+}
+
+.tabela-transacoes table tbody tr td.first-transacoes.red {
+  border-left: 5px solid #e52d27;
+}
+
+.tabela-transacoes table tbody tr td.last-transacoes.green {
+  border-right: 5px solid #27dd9b;
+}
+
+.tabela-transacoes table tbody tr td.last-transacoes.red {
+  border-right: 5px solid #e52d27;
 }
 
 /* SIDEBAR */
