@@ -1,0 +1,167 @@
+
+
+p.welcome, p.welcome-2{
+  color: #556EE6;
+  max-width: 200px!important;
+}
+
+
+
+
+
+.form-login{
+  background-color: #fff;
+  width: 450px!important;
+  border-radius: 28px;
+  padding-bottom: 24px!important;
+  box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.05);
+  
+  .form-header{
+    background: $background-form-header;
+    border-radius: 28px 28px 0px 0px;
+    height: 111px;
+
+    .title-login{font-size: 2rem!important;}
+
+    .img-login{
+      float: right;
+    }
+    .welcome-2{
+      font-size: 0.85rem;
+      margin-left: 24px;
+    }
+
+    .welcome{
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding-top: 24px;
+      margin: 24px 0 0 24px;
+    }
+
+    &.receita{background: $background-form-header-receita;}
+    &.despesa{background: $background-form-header-despesa;}
+  }
+
+  .form{
+    margin: 24px 24px;
+    
+    .alert-danger{font-size: 14px;}
+    
+    .title-login{font-size: 2rem;}
+    
+    .form-group label{margin: 5px 0;}
+  }
+
+}
+
+
+input, .btn{
+  border-radius: 28px!important;
+}
+
+.btn{
+  background-color: #556EE6!important;
+  border-color: transparent!important;
+}
+
+.btn-receita{
+  background: $button-receita!important;
+  color: white;
+}
+
+.btn-despesa{
+  background: $button-despesa!important;
+  color: white;
+}
+
+.btn-voltar a{
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: 'Poppins';
+  color: rgba(46, 58, 89,.9)!important;
+  text-decoration: none!important;
+}
+
+.btn-voltar a:hover{
+  text-decoration: none!important;
+  color: #2E3A59!important;
+  transition: .4s;
+}
+.btn-voltar{
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.btn.btn-despesa:focus, .btn.btn-despesa:active{
+  outline: 0!important;
+  border: none!important;
+}
+
+.buttons{
+  margin-bottom: 24px!important;
+  color: white!important;
+  font-weight: 500!important;
+}
+
+.btn:focus{
+  outline: 0!important;
+  border-color: #4b5fc7;
+}
+
+.txt-register{
+  font-family: 'Poppins';
+}
+
+.register-link{
+  color: #556EE6;
+  transition: .4s;
+}
+
+.register-link:hover{
+  text-decoration: none!important;
+}
+
+.alert{
+  margin: 12px!important;
+}
+
+input[type=radio]{
+  border: none;
+  outline: none;
+
+}
+
+select{
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 28px;
+  background: url('/assets/img/icons/select.svg') no-repeat;
+  background-position-x: 96%;
+  background-position-y: center;
+  border: 1px solid #ced4da;
+  color: #495057;
+}
+
+option{
+  color: #495057;
+  border-radius: 28px;
+  padding: 6px 12px;
+}
+input.form-control[type="radio"]{
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+input[value="salario"]{background-image: url('/assets/img/icons/transacoes-icons/salario.svg');}
+input[value="red-person"]{background-image: url('/assets/img/icons/transacoes-icons/red-person.svg');}
+input[value="games"]{background-image: url('/assets/img/icons/transacoes-icons/games.svg');}
+input[value="travels"]{background-image: url('/assets/img/icons/transacoes-icons/travels.svg');}
+input[value="mercado"]{background-image: url('/assets/img/icons/transacoes-icons/mercado.svg');}
+input[value="painting"]{background-image: url('/assets/img/icons/transacoes-icons/painting.svg');}
+input[value="etiqueta"]{background-image: url('/assets/img/icons/transacoes-icons/etiqueta.svg');}
+input[value="lazer"]{background-image: url('/assets/img/icons/transacoes-icons/lazer.svg');}
+input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/heart.svg');}

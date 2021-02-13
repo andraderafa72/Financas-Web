@@ -25,9 +25,11 @@ fetch(url)
   dinheiroEmCaixa = dinheiroEmCaixa.replace(',', '.')
   
   if(dinheiroEmCaixa > 0){
+    h1MeuDinheiro.classList.add('green')
     h1MeuDinheiro.innerHTML = `+R$ ${dinheiroEmCaixa.replace('.', ',')}`;
   }else{
     dinheiroEmCaixa *= -1;
+    h1MeuDinheiro.classList.add('red');
     h1MeuDinheiro.innerHTML = `-R$ ${dinheiroEmCaixa.replace('.', ',')}`;
   }
   //
@@ -42,9 +44,11 @@ fetch(url)
   
   // TRATAMENTO DE FRONT-END
   if(balanco > 0){
+    h1Balanco.classList.add('green')
     h1Balanco.innerText = `+R$ ${balanco.replace('.', ',')}`
   }else{
     balanco *= -1;
+    h1Balanco.classList.add('red')
     h1Balanco.innerText = `-R$ ${balanco.replace('.', ',')}`
   }
 
@@ -58,14 +62,14 @@ fetch(url)
     if(el.value === 'ultimos-3-meses') dadosAExportar = mediaDeValoresPorPeriodo(data.dados, 3);
     if(el.value === 'ultimos-6-meses') dadosAExportar = mediaDeValoresPorPeriodo(data.dados, 6);
     if(el.value === 'ultimos-1-ano') dadosAExportar = mediaDeValoresPorPeriodo(data.dados, 12);
-    console.log(dadosAExportar)
-    
+   
     // TRATAMENTO DE FRONT-END
     if(dadosAExportar.balanco > 0){
+      h1Balanco.classList.add('green')
       h1Balanco.innerText = `+R$ ${dadosAExportar.balanco.replace('.', ',')}`
     }else{
       dadosAExportar.balanco = (dadosAExportar.balanco * -1).toFixed(2);
-      console.log(dadosAExportar.balanco)
+      h1Balanco.classList.add('red')
       h1Balanco.innerText = `-R$ ${dadosAExportar.balanco.replace('.', ',')}`
     }
 

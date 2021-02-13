@@ -21,6 +21,11 @@
       align-items: center;
     }
 
+    .valor-balanco-mensal,
+    .valor-meu-dinheiro,
+    .valor-despesas-mensais,
+    .valor-receitas-mensais{font-weight: bold;}
+
     div{
       display: flex;
       justify-content: center;
@@ -40,13 +45,6 @@
         line-height: 16px;
         text-align: center;
         margin: 0;
-      }
-
-      h2.red, h1.red{
-        color:rgba(219,0,0,1);
-      }
-      h2.green, h1.green{
-        color:rgba(39,221,155,1);
       }
     }
   }
@@ -107,17 +105,19 @@
     width: 95%;
     text-align: center;
 
+    * tr{
+      height: 60px;
+      border-radius: 8px;
+    }
+
     thead{
       tr{
-        :first-child{border-left:5px solid#00A0FF;}
-        :last-child{border-right:5px solid#00A0FF;}
-
-        *{border-bottom: 2.5px solid#00A0FF;}
+        box-shadow: 0px 12px 32px rgba(18, 38, 63, 0.1);
+        :last-child{width: 12.5%;}
+        :last-child, :nth-child(5){text-align: right;}
 
         th{
           padding: 8px 10px;
-          background-color: white;
-          border-left: 4px solid rgba(202, 203, 204, 0.3);
           margin: 15px 0;
         }
       }
@@ -126,30 +126,60 @@
     tbody{
       tr{
         :first-child{border-left: 0;}
-        :nth-child(5){text-align: right;}
-        :last-child{text-align: right;}
+        :nth-child(5){text-align: right; color: $green}
+        :last-child{text-align: right; width: 12.5%;}
 
-        &.despesa *{border-bottom: 1px solid rgba(229,45,39,.2);}
-        &.receita *{border-bottom: 1px solid rgba(39,221,155,.2);}
+        &.despesa td{border-bottom: 1px solid rgba(229,45,39,.2);}
+        &.receita td{border-bottom: 1px solid rgba(39,221,155,.2);}
 
         td{ 
           padding: 8px 10px;
-          background-color: white;
-          border-left: 4px solid rgba(202, 203, 204, 0.3);
           margin: 15px 0;
 
           &#icon{
             width: 5%;
             
-            img{border: none;}
+            img{border: none; min-width: 30px;min-height: 30px;}
           }
 
-          &.first-transacoes.green{border-left:5px solid rgba(39,221,155,1);}
-          &.first-transacoes.red{border-left:5px solid rgba(229,45,39,1);}
-          &.last-transacoes.green{border-right:5px solid rgba(39,221,155,1);}
-          &.last-transacoes.red{border-right:5px solid rgba(229,45,39,1);}
+          &.tipo-transacaos-despesa,
+          &.tipo-transacaos-receita{font-weight: bold;}
+
+          a svg{
+            border: none;
+            margin-left: 10px;
+            min-width: 24px;
+            min-height: 24px;
+
+            &.edit{
+              opacity: 0.8;
+
+              &:hover path{
+                transition: .7s ease;
+                opacity: 1;
+                fill: $blue;
+              }
+            }
+
+            &.delete path{
+              fill: $red; 
+              opacity: 0.8;
+
+              &:hover{
+                opacity: 1;
+                transition: .7s ease;
+              }
+            }
+          }
         }
       }
     }
   }
+}
+
+.green{
+  color: $green;
+}
+.red{
+  color:$red;
 }
