@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js --ignore public --ignore frontend",
-    "dev": "webpack -w"
+    "start": "node server.js",
+    "dev": "nodemon server.js --ignore public --ignore frontend",
+    "wp": "webpack -w"
   },
   "keywords": [],
   "author": "",
