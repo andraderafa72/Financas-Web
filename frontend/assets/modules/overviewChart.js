@@ -1,4 +1,4 @@
-const url = 'http://localhost:5500/api/overview/chart';
+const url = 'https://financas-web-app.herokuapp.com/api/overview/chart';
 
 fetch(url)
 .then( function(response) {
