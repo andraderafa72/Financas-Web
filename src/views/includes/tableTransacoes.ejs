@@ -57,32 +57,32 @@
         <% } else{ %>
         <td><%= `${transacao.data.getDate() + 1}/${transacao.data.getMonth() + 1}/${transacao.data.getFullYear()}` %></td>
         <% } %>
-        
         <% if(transacao.tipo === 'despesa') { %>
-          <td class="tipo-transacao-despesa"><%= `R$ ${transacao.valor}` %></td>
-          <td>
+          <td class="tipo-transacao-despesa red"><%= `R$ ${transacao.valor}` %></td>
+          <td class= "acao-despesa">
             <a href="#">
               <svg class="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="#C2C9D1"/>
                 <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="black" fill-opacity="0.25"/>
               </svg>
             </a>  
-            <a href="#">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-delete">
               <svg class="delete" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="#C2C9D1"/>
                 <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black" fill-opacity="0.25"/>
               </svg>
-            </a>          </td>
+            </a>          
+          </td>
         <% } else if(transacao.tipo ==='receita'){ %>
-          <td class="tipo-transacao-receita"><%= `R$ ${transacao.valor}` %></td>
-          <td>
+          <td class="tipo-transacao-receita green"><%= `R$ ${transacao.valor}` %></td>
+          <td class= "acao-receita">
             <a href="#">
               <svg class="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="#C2C9D1"/>
                 <path d="M3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM20.71 7.04C21.1 6.65 21.1 6.02 20.71 5.63L18.37 3.29C17.98 2.9 17.35 2.9 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04Z" fill="black" fill-opacity="0.25"/>
               </svg>
             </a>  
-            <a href="#">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modal-delete">
               <svg class="delete" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="#C2C9D1"/>
                 <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z" fill="black" fill-opacity="0.25"/>
@@ -90,7 +90,23 @@
             </a>  
           </td>
         <% } %>
-      </tr>   
-    <% } %>
+      </tr>           
+      <div class="modal" id="modal-delete" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/transacoes/delete/<%= transacao._id %>" class="btn btn-danger">Deletar</a>
+              </div>
+            </div>
+          </div>
+        </div>
   <% } %>  
-
+      <% } %>

@@ -456,6 +456,15 @@ input[value="heart"] {
   background-image: url("/assets/img/icons/transacoes-icons/heart.svg");
 }
 
+.modal .btn-danger {
+  background-color: #e52d27 !important;
+  opacity: 0.9;
+}
+
+.modal .btn-danger:hover {
+  opacity: 1;
+}
+
 .overview-title {
   font-family: 'Poppins';
   font-weight: 600;
@@ -950,15 +959,6 @@ input[value="heart"] {
   margin: 15px 0;
 }
 
-.tabela-transacoes table tbody tr :first-child {
-  border-left: 0;
-}
-
-.tabela-transacoes table tbody tr :nth-child(5) {
-  text-align: right;
-  color: #27dd9b;
-}
-
 .tabela-transacoes table tbody tr :last-child {
   text-align: right;
   width: 12.5%;
@@ -977,6 +977,27 @@ input[value="heart"] {
   margin: 15px 0;
 }
 
+.tabela-transacoes table tbody tr td.first-transacoes.red {
+  border-left: 3px solid #e52d27;
+}
+
+.tabela-transacoes table tbody tr td.first-transacoes.green {
+  border-left: 3px solid #27dd9b;
+}
+
+.tabela-transacoes table tbody tr td.acao-despesa {
+  border-right: 3px solid #e52d27;
+}
+
+.tabela-transacoes table tbody tr td.acao-receita {
+  border-right: 3px solid #27dd9b;
+}
+
+.tabela-transacoes table tbody tr td.tipo-transacao-despesa, .tabela-transacoes table tbody tr td.tipo-transacao-receita {
+  font-weight: bold !important;
+  text-align: right !important;
+}
+
 .tabela-transacoes table tbody tr td#icon {
   width: 5%;
 }
@@ -985,10 +1006,6 @@ input[value="heart"] {
   border: none;
   min-width: 30px;
   min-height: 30px;
-}
-
-.tabela-transacoes table tbody tr td.tipo-transacaos-despesa, .tabela-transacoes table tbody tr td.tipo-transacaos-receita {
-  font-weight: bold;
 }
 
 .tabela-transacoes table tbody tr td a svg {
@@ -1021,11 +1038,11 @@ input[value="heart"] {
 }
 
 .green {
-  color: #27dd9b;
+  color: #27dd9b !important;
 }
 
 .red {
-  color: #e52d27;
+  color: #e52d27 !important;
 }
 
 * {

@@ -167,3 +167,5 @@ input[value="painting"]{background-image: url('/assets/img/icons/transacoes-icon
 input[value="etiqueta"]{background-image: url('/assets/img/icons/transacoes-icons/etiqueta.svg');}
 input[value="lazer"]{background-image: url('/assets/img/icons/transacoes-icons/lazer.svg');}
 input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/heart.svg');}
+
+.modal{.btn-danger{background-color: $red!important; opacity: 0.9; &:hover{opacity: 1;}}}

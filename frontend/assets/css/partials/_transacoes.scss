@@ -125,25 +125,31 @@
 
     tbody{
       tr{
-        :first-child{border-left: 0;}
-        :nth-child(5){text-align: right; color: $green}
         :last-child{text-align: right; width: 12.5%;}
 
         &.despesa td{border-bottom: 1px solid rgba(229,45,39,.2);}
         &.receita td{border-bottom: 1px solid rgba(39,221,155,.2);}
-
+        
         td{ 
           padding: 8px 10px;
           margin: 15px 0;
 
+          &.first-transacoes.red{border-left: 3px solid $red;}
+          &.first-transacoes.green{border-left: 3px solid $green;}
+          
+          &.acao-despesa{border-right: 3px solid $red;}
+          &.acao-receita{border-right: 3px solid $green;}
+
+          &.tipo-transacao-despesa,
+          &.tipo-transacao-receita{font-weight: bold!important; text-align: right!important;}
+  
           &#icon{
             width: 5%;
             
             img{border: none; min-width: 30px;min-height: 30px;}
           }
 
-          &.tipo-transacaos-despesa,
-          &.tipo-transacaos-receita{font-weight: bold;}
+          
 
           a svg{
             border: none;
@@ -178,8 +184,8 @@
 }
 
 .green{
-  color: $green;
+  color: $green!important;
 }
 .red{
-  color:$red;
+  color:$red!important;
 }

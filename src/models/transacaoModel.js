@@ -35,6 +35,11 @@ class Transacao {
     this.transacao = await TransacaoModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
   }
 
+  async delete(id){
+    if (typeof id !== 'string') return;
+    this.transacao = await TransacaoModel.findOneAndDelete({ _id: id })
+  }
+
   async buscarTransacoes(id){
     const transacao = await TransacaoModel.find({owner: id}).sort({data: -1})
     return transacao;
