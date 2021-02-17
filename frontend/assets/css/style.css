@@ -249,11 +249,6 @@ a.transacoes:hover img {
   background-color: #41424d;
 }
 
-p.welcome, p.welcome-2 {
-  color: #556EE6;
-  max-width: 200px !important;
-}
-
 .form-login {
   background-color: #fff;
   width: 450px !important;
@@ -280,6 +275,11 @@ p.welcome, p.welcome-2 {
 .form-login .form-header .welcome-2 {
   font-size: 0.85rem;
   margin-left: 24px;
+}
+
+.form-login .form-header p.welcome, .form-login .form-header p.welcome-2 {
+  color: #556EE6;
+  max-width: 200px !important;
 }
 
 .form-login .form-header .welcome {

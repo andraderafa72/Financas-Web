@@ -1,9 +1,6 @@
 
 
-p.welcome, p.welcome-2{
-  color: #556EE6;
-  max-width: 200px!important;
-}
+
 
 
 
@@ -29,6 +26,11 @@ p.welcome, p.welcome-2{
     .welcome-2{
       font-size: 0.85rem;
       margin-left: 24px;
+    }
+    
+    p.welcome, p.welcome-2{
+      color: #556EE6;
+      max-width: 200px!important;
     }
 
     .welcome{
