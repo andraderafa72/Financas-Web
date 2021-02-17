@@ -136,9 +136,9 @@
       }
 
       // Identificação
-      .historico-table-id {
+      .historico-table-id {max-width: 40%;
         font-family: 'Ubuntu';
-        font-size: 14px;
+        font-size: 0.8rem;
         font-weight: bold;
         line-height: 16px;
         color: #464343;
@@ -148,7 +148,7 @@
       .historico-table-tipo,
       .historico-table-data {
         font-family: 'Ubuntu';
-        font-size: 12px;
+        font-size: 0.7rem;
         line-height: 14px;
         font-weight: bold;
         color: #C7C7C7;
@@ -156,9 +156,10 @@
 
       // Valors
       .historico-table-valor {
+        min-width: 20%;
         font-family: 'Ubuntu';
         font-weight: bold;
-        font-size: 14px;
+        font-size: 0.8rem;
         line-height: 16px;
         text-align: right;
       }

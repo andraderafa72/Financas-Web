@@ -32,12 +32,17 @@ class Transacao {
 
     this.validate();
     if(this.errors.length > 0 ) return;
-    this.transacao = await TransacaoModel.findOneAndUpdate({ _id: id }, this.body, { new: true })
+    this.transacao = await TransacaoModel.findOneAndUpdate({ _id: id }, this.body)
   }
 
   async delete(id){
     if (typeof id !== 'string') return;
     this.transacao = await TransacaoModel.findOneAndDelete({ _id: id })
+  }
+
+  async buscarPorId(id){
+    const transacao = await TransacaoModel.findOne({_id: id});
+    return transacao;
   }
 
   async buscarTransacoes(id){

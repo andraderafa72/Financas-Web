@@ -1,0 +1,93 @@
+<%- include('includes/head'); %>
+<%- include('includes/voltarButton'); %>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      
+      <div class="col-lg-6">
+
+        <div class="form-login mx-auto my-5">
+          
+          <div class="form-header edit">
+            <h1 class="welcome title-login text-left">Editar Transação</h1>
+          </div>
+          <%- include('includes/messages'); %>
+          <section class="form">
+            <form class="my-3 " action="/transacoes/edit/index/<%= transacao._id%>" method="POST">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+              <input type="hidden" name="owner" value="<%= user._id %>">
+              <% if(transacao.tipo === 'receita') {%>
+                <input type="hidden" name="tipo" value="receita">
+              <% } else {%>
+                <input type="hidden" name="tipo" value="despesa">
+              <% } %>
+              <div class="form-group">
+                <label>Identificador:</label>
+                <input type="text" class="form-control" name="identificador" value="<%= transacao.identificador %>" placeholder="Digite um identificador">
+                <div class="error-ident" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Valor:</label>
+                <input type="text" class="form-control" name="valor" value="<%= transacao.valor %>" placeholder="Digite o valor da despesa">
+                <div class="error-valor" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Data:</label>
+                <%
+                let mm = transacao.data.getMonth() + 1;
+                if(transacao.data.getMonth() < 10){
+                  mm =  `0${mm}`;
+                }
+                let dd = transacao.data.getDate() + 1;
+                if(transacao.data.getDate() < 10){
+                  dd =  `0${dd}`;
+                }
+                const data = `${transacao.data.getFullYear()}-${mm}-${dd}`;
+                %>
+                <input type="date" class="form-control" value="<%= data %>" name="data">
+                <div class="error-vencimento" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Categoria:</label>
+                <select name="categoria" id="categoria" required>
+                  <option value="Salario">Salário</option>
+                  <option value="Projeto">Restaurante</option>
+                  <option value="Apostas">Supermercado</option>
+                  <option value="Vendas">Lazer</option>
+                  <option value="Loja">Esporte</option>
+                  <option value="Eletronicos">Eletrônicos</option>
+                  <option value="Transporte">Transporte</option>
+                  <option value="Escola">Escola</option>
+                  <option value="Faculdade">Faculdade</option>
+                </select>
+                <div class="error-categoria" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+              <div class="form-group">
+                <label>Icone:</label>
+                <div class="icones" style="display: flex; justify-content: space-between;"> 
+                  <input type="radio" class="form-control" name="icone" value="salario">
+                  <input type="radio" class="form-control" name="icone" value="red-person">
+                  <input type="radio" class="form-control" name="icone" value="games">
+                  <input type="radio" class="form-control" name="icone" value="travels">
+                  <input type="radio" class="form-control" name="icone" value="mercado">
+                  <input type="radio" class="form-control" name="icone" value="painting">
+                  <input type="radio" class="form-control" name="icone" value="etiqueta">
+                  <input type="radio" class="form-control" name="icone" value="lazer">
+                  <input type="radio" class="form-control" name="icone" value="heart">
+                </div>
+                <div class="error-icone" style="color: red; font-size: 14px; opacity: 0.8; margin-left: 10px;"></div>
+              </div>
+                           
+              <div class="mx-auto my-4 buttons">
+                <button type="submit" class="btn btn-edit" style="width: 100%;">Atualizar</button>
+              </div>
+            </form>
+          </section>
+          
+        </div>
+      </div>
+        <div class="col-lg-3"></div>
+        
+      </div>
+  </div>
+<%- include('includes/footer') %>

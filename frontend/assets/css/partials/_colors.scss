@@ -2,10 +2,13 @@ $body-background-color: #f8f8fb;
 $background-form-header: rgba(85, 110, 230, 0.25);
 $background-form-header-despesa: rgba(219, 0, 0, 0.28);
 $background-form-header-receita: rgba(62, 192, 141, 0.25);
+$background-form-header-edit: rgba(0, 160, 255, .25);
 $button-despesa: linear-gradient(180deg, #E52D27 0%, #B31217 100%);
 $button-despesa-hover: linear-gradient(180deg, #B31217 0%, #E52D27 100%);
 $button-receita: linear-gradient(180deg, #27DD9B 0%, #24FE41 100%);
 $button-receita-hover: linear-gradient(180deg, #24FE41 0%, #27DD9B 100%);
+$button-edit: rgb(0, 160, 255);
+$button-edit-hover: linear-gradient(180deg, #24FE41 0%, #27DD9B 100%);
 
 $green:rgba(39,221,155,1);
 $red:rgba(229,45,39,1);

@@ -42,6 +42,7 @@
 
     &.receita{background: $background-form-header-receita;}
     &.despesa{background: $background-form-header-despesa;}
+    &.edit{background: $background-form-header-edit;}
   }
 
   .form{
@@ -64,6 +65,11 @@ input, .btn{
 .btn{
   background-color: #556EE6!important;
   border-color: transparent!important;
+}
+
+.btn-edit{
+  background: $button-edit!important;
+  color: white;
 }
 
 .btn-receita{
