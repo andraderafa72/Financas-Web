@@ -62,10 +62,9 @@
       margin-left: 7px!important;
     }
     
-    .transacao-container-mid select{
+     select{
       max-width: 250px;
-      font-size: 13px;
-      height: 80%;
+      font-size: 0.8rem;
       margin: 0 10px 0 15px;
       border-color: rgba(159, 162, 180,.3);
     }
@@ -188,4 +187,55 @@
 }
 .red{
   color:$red!important;
+}
+
+@media(max-width: 768px){
+  .transacao-container{
+    width: 100%;
+    border-radius: 28px;
+    
+    .transacao-container-top{
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      .media-despesas-mensais,
+      .media-receitas-mensais,
+      .balanco-mensal,
+      .meu-dinheiro{
+        margin-top: 15px;
+        width: 90%;
+        height: 75px;
+      }
+    }
+    .transacao-container-mid{
+      .select-transacoes p{display: none;}
+      select{
+        width: 210px;
+      }
+    }
+  }
+}
+
+@media(max-width:500px){
+  .tabela-transacoes{
+    table{
+      thead{
+        tr{
+          :nth-child(2),:nth-child(3){display: none;}
+        }
+      }
+      tbody{
+        tr{
+          #icon{display: none;}
+
+          :nth-child(3){display: none;}
+          :last-child{width: 25%;}
+          td{
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
 }

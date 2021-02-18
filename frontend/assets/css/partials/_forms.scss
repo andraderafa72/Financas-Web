@@ -83,6 +83,10 @@ input, .btn{
 }
 
 .btn-voltar a{
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
   cursor: pointer;
   font-size: 2rem;
   font-family: 'Poppins';
@@ -96,9 +100,8 @@ input, .btn{
   transition: .4s;
 }
 .btn-voltar{
-  position: absolute;
-  top: 24px;
-  left: 24px;
+  position: relative;
+  
 }
 
 .btn.btn-despesa:focus, .btn.btn-despesa:active{
@@ -175,3 +178,11 @@ input[value="lazer"]{background-image: url('/assets/img/icons/transacoes-icons/l
 input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/heart.svg');}
 
 .modal{.btn-danger{background-color: $red!important; opacity: 0.9; &:hover{opacity: 1;}}}
+
+@media(max-width:550px){
+  .btn-voltar{
+    a{font-size: 1.3rem;}
+    top: 14px;
+    left: 14px;
+  }
+}
