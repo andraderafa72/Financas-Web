@@ -9,9 +9,9 @@ import './assets/modules/transacoes';
 
 // JQUERY
 
-$(window).on('load', function(){
-  setTimeout(removeLoader, 2000);
-});
+// $(window).on('load', function(){
+  setTimeout(removeLoader, 1000);
+// });
 function removeLoader(){
     $( ".d-loading" ).fadeOut(500, function() {
       $( ".d-loading" ).remove();

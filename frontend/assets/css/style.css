@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import './burguerMenu.css';
-
 .d-loading {
   position: fixed;
   top: 0;
@@ -260,8 +258,8 @@
   top: 0;
   left: 0;
   z-index: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -293,6 +291,100 @@ a.transacoes:hover img {
   width: 100%;
   padding: 10px;
   background-color: #41424d;
+}
+
+.burger {
+  height: 3em;
+  width: 3em;
+  position: relative;
+  font-size: 9px;
+  cursor: pointer;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 2;
+}
+
+.burger .burger-lines:after {
+  left: 0;
+  top: -1em;
+}
+
+.burger .burger-lines:before {
+  left: 1em;
+  top: 1em;
+}
+
+.burger:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 150%;
+  width: 150%;
+  top: -25%;
+  left: -25%;
+}
+
+.burger .burger-lines {
+  top: 50%;
+  margin-top: -0.125em;
+}
+
+.burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
+  pointer-events: none;
+  display: block;
+  content: '';
+  width: 100%;
+  border-radius: 0.25em;
+  background-color: white;
+  height: 0.2em;
+  position: absolute;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.burger .burger-lines:after {
+  left: 0;
+  top: -1em;
+}
+
+.burger .burger-lines:before {
+  left: 1em;
+  top: 1em;
+}
+
+.burger.burger-squeeze .burger-lines, .burger.burger-squeeze .burger-lines:after, .burger.burger-squeeze .burger-lines:before {
+  -webkit-transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+  transition: .2s top .2s, .1s left, .2s transform, .4s background-color .2s;
+}
+
+.burger.burger-squeeze .burger-lines:after, .burger.burger-squeeze .burger-lines:before {
+  width: 2em;
+}
+
+.burger.burger-squeeze.open .burger-lines, .burger.burger-squeeze.open .burger-lines:after, .burger.burger-squeeze.open .burger-lines:before {
+  -webkit-transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+  transition: .2s background-color, .2s top, .2s left, .2s transform .15s;
+}
+
+.burger.burger-squeeze.open .burger-lines {
+  background-color: transparent;
+}
+
+.burger.burger-squeeze.open .burger-lines:before, .burger.burger-squeeze.open .burger-lines:after {
+  left: 0.5em;
+  top: 0px;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.burger.burger-squeeze.open .burger-lines:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.burger.burger-squeeze.open .burger-lines:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .form-login {
