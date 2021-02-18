@@ -50,9 +50,26 @@ body {
 }
 
 /* @MEDIA */
+@media(max-width:1280px){
+  .header{
+    display: block;
+  }
+  .side-bar{
+    left: -255px;
+    transition: .4s;
+  }
+  .toggler{
+    left: 0!important;
+  }
+  .app-container{
+    padding: 2vh 2vw;
+    margin-left: 0;
+  }
+}
+
 @media(max-width:992px){
   .historico-de-transacoes,.registro-graph{
-    width: 95vw;  
+    width: 90vw;  
     height: 100%;
     margin-top: 15px;
   }
@@ -76,19 +93,15 @@ body {
   }
 }
 
-@media(max-width:1280px){
-  .header{
-    display: block;
+@media(max-width:500px){
+  body,html{overflow-x: hidden;}
+  .historico-de-transacoes,.registro-graph{
+    zoom: 93.5%;
   }
-  .side-bar{
-    left: -255px;
-    transition: .4s;
-  }
-  .toggler{
-    left: 0!important;
-  }
+  .chart-registro{max-width: 400px!important;max-height: 100%;}
+  .overview-registro-title,.overview-registro-subtitle{max-width: 300px;}
   .app-container{
-    padding: 2vh 2vw;
+    padding: 2vh 1vw;
     margin-left: 0;
   }
-  }
+}

@@ -1,5 +1,8 @@
 const url = 'https://financas-web-app.herokuapp.com/api/overview/chart';
 
+// URL PARA FETCH EM DESENVOLVIMENTO LOCALHOST
+// const devUrl = 'http://localhost:5500/api/overview/chart';
+
 // BUSCANDO COMPONENTES NA DOM
 const h1Receitas = document.querySelector('.valor-receitas-mensais')
 const h1Despesas = document.querySelector('.valor-despesas-mensais')
