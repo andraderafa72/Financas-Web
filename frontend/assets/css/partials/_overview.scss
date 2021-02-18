@@ -24,6 +24,7 @@
 
   .left-overview {
     display: flex;
+    width: 38vw;
     flex-direction: column;
     justify-content: space-between;
     height: 82.5vh;
@@ -40,9 +41,10 @@
 /* GRAFICO ANUAL */
 .registro-graph {
   padding: 1.5vh 2.6vw;
-  width: 38vw;
+  width: 100%;
   height: 45vh;
   min-width: 470px;
+  min-height: 280px;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 28px;
 
@@ -69,9 +71,10 @@
 /* HISTORICO DE TRANSAÇÕES */
 .historico-de-transacoes {
   padding: 1.5vh 2.6vw;
-  width: 38vw;
+  width: 100%;
   height: 35vh;
   min-width: 470px;
+  min-height: 218px;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 28px;
 
@@ -170,6 +173,7 @@
 
 /* LIMITES */
 .limites-link {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -192,10 +196,11 @@
 }
 
 .limites {
+  position: relative;
   overflow-y: hidden;
   overflow-x: auto;
   width: 435.77px;
-  height: 100%;
+  min-height: 135px;
 
   .limites-card { // ul
     
@@ -234,8 +239,11 @@
 
 /* PROGRESSBAR LIMITES */
 .progressbar-limites{
+  position: relative;
   width: 32.25vw;
   height: 25vh;
+  min-height: 135px;
+  margin-bottom: 15px;
 
   .pb-title{
     font-family: 'Poppins';

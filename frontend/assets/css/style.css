@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import './burguerMenu.css';
+
 .btns-adicionar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +44,7 @@
   text-align: center;
   color: #F7F8FC;
   opacity: 0.9;
+  min-height: 55px;
 }
 
 .transacoes-buttons {
@@ -101,7 +103,7 @@
 
 /* SIDEBAR */
 .side-bar {
-  position: absolute;
+  position: fixed;
   float: left;
   top: 0;
   left: 0;
@@ -211,12 +213,12 @@
 }
 
 .background-sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -518,6 +520,7 @@ input[value="heart"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 38vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -545,9 +548,10 @@ input[value="heart"] {
 /* GRAFICO ANUAL */
 .registro-graph {
   padding: 1.5vh 2.6vw;
-  width: 38vw;
+  width: 100%;
   height: 45vh;
   min-width: 470px;
+  min-height: 280px;
   -webkit-box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 28px;
@@ -574,9 +578,10 @@ input[value="heart"] {
 /* HISTORICO DE TRANSAÇÕES */
 .historico-de-transacoes {
   padding: 1.5vh 2.6vw;
-  width: 38vw;
+  width: 100%;
   height: 35vh;
   min-width: 470px;
+  min-height: 218px;
   -webkit-box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 28px;
@@ -671,6 +676,7 @@ input[value="heart"] {
 
 /* LIMITES */
 .limites-link {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -697,10 +703,11 @@ input[value="heart"] {
 }
 
 .limites {
+  position: relative;
   overflow-y: hidden;
   overflow-x: auto;
   width: 435.77px;
-  height: 100%;
+  min-height: 135px;
 }
 
 .limites .limites-card {
@@ -743,8 +750,11 @@ input[value="heart"] {
 
 /* PROGRESSBAR LIMITES */
 .progressbar-limites {
+  position: relative;
   width: 32.25vw;
   height: 25vh;
+  min-height: 135px;
+  margin-bottom: 15px;
 }
 
 .progressbar-limites .pb-title {
@@ -1203,7 +1213,7 @@ body {
   .top-1-bar,
   .top-2-bar,
   .top-3-bar {
-    min-width: 75vw;
+    min-width: 72.5vw;
   }
   .limites {
     width: 95vw;
@@ -1215,11 +1225,15 @@ body {
 }
 
 @media (max-width: 500px) {
+  .overview-container {
+    min-height: 1150px;
+  }
   body, html {
     overflow-x: hidden;
   }
   .historico-de-transacoes, .registro-graph {
-    zoom: 93.5%;
+    min-width: 100%;
+    width: 95vw;
   }
   .form-login {
     max-width: 430px !important;

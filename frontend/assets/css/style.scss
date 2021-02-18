@@ -81,7 +81,7 @@ body {
   .top-1-bar,
   .top-2-bar,
   .top-3-bar{
-    min-width: 75vw;
+    min-width: 72.5vw;
   }
 
   .limites{
@@ -94,9 +94,13 @@ body {
 }
 
 @media(max-width:500px){
+  .overview-container{
+    min-height: 1150px;
+  }
   body,html{overflow-x: hidden;}
   .historico-de-transacoes,.registro-graph{
-    zoom: 93.5%;
+    min-width: 100%;
+    width: 95vw;
   }
 
   .form-login{max-width: 430px!important; max-height: 575px;}
