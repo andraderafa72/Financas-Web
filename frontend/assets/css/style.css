@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import './burguerMenu.css';
+
 .d-loading {
   position: fixed;
   top: 0;
@@ -15,8 +16,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #f2f2f2;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .d-loading .loading {
@@ -1210,6 +1211,7 @@ body {
 
 .app-container {
   display: none;
+  opacity: 0;
   max-height: 95vh;
   padding: 3.3333vh 2.5vw 1.51vh 2.5vw;
   margin-left: 22vw;
@@ -1217,6 +1219,7 @@ body {
 
 .app-container.block {
   display: block;
+  opacity: 1;
 }
 
 /* @MEDIA */
