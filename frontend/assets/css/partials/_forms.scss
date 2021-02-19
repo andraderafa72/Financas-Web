@@ -184,7 +184,7 @@ input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/h
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    input{ margin: 0 2.5px; width: 28px; height: 28px;}
+    input.form-control[type="radio"]{ margin: 0 2.5px; width: 30px; height: 30px;}
   }
   .form-header{
     .title-login{font-size: 1.5rem!important;}

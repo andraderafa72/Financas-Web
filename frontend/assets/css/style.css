@@ -639,10 +639,10 @@ input[value="heart"] {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .icones input {
+  .icones input.form-control[type="radio"] {
     margin: 0 2.5px;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
   }
   .form-header .title-login {
     font-size: 1.5rem !important;
