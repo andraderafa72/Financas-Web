@@ -64,16 +64,13 @@ input, .btn{
   background: $button-edit!important;
   color: white;
 }
-
-.btn-receita{
-  background: $button-receita!important;
+.btn-receita, .btn-despesa{
   color: white;
+  margin-bottom: 15px;
 }
 
-.btn-despesa{
-  background: $button-despesa!important;
-  color: white;
-}
+.btn-receita{background: $button-receita!important;}
+.btn-despesa{background: $button-despesa!important;}
 
 .btn-voltar a{
   position: absolute;
@@ -186,6 +183,7 @@ input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/h
 
   .icones{
     flex-wrap: wrap;
+    justify-content: flex-start;
 
     input{ margin: 0 2.5px;}
   }

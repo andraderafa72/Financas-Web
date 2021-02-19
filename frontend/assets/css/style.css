@@ -474,16 +474,19 @@ input, .btn {
   color: white;
 }
 
+.btn-receita, .btn-despesa {
+  color: white;
+  margin-bottom: 15px;
+}
+
 .btn-receita {
   background: -webkit-gradient(linear, left top, left bottom, from(#27DD9B), to(#24FE41)) !important;
   background: linear-gradient(180deg, #27DD9B 0%, #24FE41 100%) !important;
-  color: white;
 }
 
 .btn-despesa {
   background: -webkit-gradient(linear, left top, left bottom, from(#E52D27), to(#B31217)) !important;
   background: linear-gradient(180deg, #E52D27 0%, #B31217 100%) !important;
-  color: white;
 }
 
 .btn-voltar a {
@@ -633,6 +636,9 @@ input[value="heart"] {
   .icones {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .icones input {
     margin: 0 2.5px;
