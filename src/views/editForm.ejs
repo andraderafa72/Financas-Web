@@ -12,7 +12,7 @@
             <h1 class="welcome title-login text-left">Editar Transação</h1>
           </div>
           <%- include('includes/messages'); %>
-          <section class="form">
+          <section class="form edit-form">
             <form class="my-3 " action="/transacoes/edit/index/<%= transacao._id%>" method="POST">
               <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <input type="hidden" name="owner" value="<%= user._id %>">

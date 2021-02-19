@@ -12,7 +12,7 @@
             <h1 class="welcome title-login text-left">Cadastrar Receita</h1>
           </div>
           <%- include('includes/messages'); %>
-          <section class="form">
+          <section class="form receitas-form">
             <form class="my-3 " action="/receitas/registrar/index" method="POST">
               <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <input type="hidden" name="owner" value="<%= user._id %>">

@@ -12,7 +12,7 @@
             <h1 class="welcome text-left title-login">Cadastrar Despesa</h1>
           </div>
           <%- include('includes/messages'); %>
-          <section class="form">
+          <section class="form despesas-form">
             <form class="my-3 " action="/despesas/registrar/index" method="POST">
               <input type="hidden" name="_csrf" value="<%= csrfToken %>">
               <input type="hidden" name="owner" value="<%= user._id %>">

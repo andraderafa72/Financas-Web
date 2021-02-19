@@ -46,7 +46,6 @@ exports.edit = async(req,res) => {
 
       return;
     }
-    console.log(transacao.body)
 
     req.flash('success', 'Transação editada com sucesso!');
     req.session.save(() => res.redirect(`/transacoes/index/${req.session.user._id}`));
