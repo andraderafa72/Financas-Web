@@ -15,13 +15,20 @@ Use the package manager [npm](https://nodejs.org/en/download/) to install the de
 ```bash
 npm i
 ```
+<br> <i>See the file 'package.json' for more information about the scripts</i> <br>
+
+To run the Node App: (Production)
+```bash
+npm start
+```
+
 To start watching changes with webpack: (Recommended if you want to make changes)
 ```bash
-npm run dev
+npm run wp
 ```
 To use the application in a local server:
 ```bash
-npm start
+npm run dev
 ```
 To test the application:
 ```bash
