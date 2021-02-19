@@ -634,6 +634,9 @@ input[value="heart"] {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .icones input {
+    margin: 0 2.5px;
+  }
   .form-header .title-login {
     font-size: 1.5rem !important;
   }
