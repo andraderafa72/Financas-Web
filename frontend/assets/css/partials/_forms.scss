@@ -184,5 +184,10 @@ input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/h
     min-height: 650px;
   }
 
-  input[type="radio"]{width: 30px; height: 30px;}
+  .icones{
+    flex-wrap: wrap;
+  }
+  .form-header{
+    .title-login{font-size: 1.5rem!important;}
+  }
 }

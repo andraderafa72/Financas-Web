@@ -630,9 +630,12 @@ input[value="heart"] {
   .form-login {
     min-height: 650px;
   }
-  input[type="radio"] {
-    width: 30px;
-    height: 30px;
+  .icones {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .form-header .title-login {
+    font-size: 1.5rem !important;
   }
 }
 
