@@ -1,7 +1,6 @@
 .form-login{
   background-color: #fff;
   max-width: 450px;
-  min-height: 600px;
   height: 100%;
   border-radius: 28px;
   padding-bottom: 24px!important;
@@ -180,4 +179,10 @@ input[value="heart"]{background-image: url('/assets/img/icons/transacoes-icons/h
     top: 14px;
     left: 14px;
   }
+
+  .form-login{
+    min-height: 650px;
+  }
+
+  input[type="radio"]{width: 30px; height: 30px;}
 }

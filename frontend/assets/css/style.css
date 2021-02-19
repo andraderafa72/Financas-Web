@@ -390,7 +390,6 @@ a.transacoes:hover img {
 .form-login {
   background-color: #fff;
   max-width: 450px;
-  min-height: 600px;
   height: 100%;
   border-radius: 28px;
   padding-bottom: 24px !important;
@@ -627,6 +626,13 @@ input[value="heart"] {
   }
   .btn-voltar a {
     font-size: 1.3rem;
+  }
+  .form-login {
+    min-height: 650px;
+  }
+  input[type="radio"] {
+    width: 30px;
+    height: 30px;
   }
 }
 
