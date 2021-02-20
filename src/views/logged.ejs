@@ -1,21 +1,17 @@
 <%- include('includes/head'); %>
-
-  <section class="container">
-    <div class="row">
-      <div class="col-lg-3"></div>
-      <div class="col-lg-6 my-5">
-        <h1 style="font-family: 'Poppins';">Seja bem vindo, <%= user.nome %> </h1>
-        <% if(user){ %> 
-          <div style="margin-top: 15px;">
-            <a href="/overview/index/<%= user._id %>" style="padding: 10px;">Overview</a>
-            <a href="/login/logout" class="logout-link" style="padding: 10px;">Sair</a>
-          </div>
-        <% } %>
-      </div>
-      <div class="col-lg-3"></div>
+  <main class="index">
+  <section class="landing-page">
+    <div class="content-left">
+      <h1 class="lp-title">Seja bem vindo, <%= user.nome %>!</h1>
+      <h3 class="lp-subtitle">Acesse o nosso portal clicando em 'Overview'.</h3>
+        <div class="buttons">
+          <a href="/overview/index/<%= user._id %> " class="btn btn-primary">Overview</a>
+          <a href="/login/logout" class="btn logout-link">Sair</a>
+        </div>
     </div>
-
-    
+    <div class="content-right">
+      <img src="/assets/img/Financas.JPG" alt="">
+    </div>
   </section>
-
+</main>
   <%- include('includes/footer') %>

@@ -1,25 +1,25 @@
 <%- include('includes/head'); %>
-
-  <section class="container">
-    <div class="row">
-      <div class="col-lg-3"></div>
-      <div class="col-lg-6 my-5">
-        <% if(!user){ %> 
-        <h1 style="font-family: 'Poppins';">Seja bem vindo. Entre ou cadastre-se para continuar</h1>
-        <a href="/login/index" style="padding: 10px;">Login</a>
-        <a href="/register/index" style="padding: 10px;">Register</a>
-        <% } else {%>
-          <div style="margin-top: 15px;">
-            <h1 style="font-family: 'Poppins';">Seja bem vindo, <%= user.nome %> </h1>
-            <a href="/overview/index/<%= user._id %>" style="padding: 10px;">Overview</a>
-            <a href="/login/logout" class="logout-link" style="padding: 10px;">Sair</a>
-          </div>
-        <% }%>
+  <main class="index">
+  <section class="landing-page">
+    <div class="content-left">
+      <h1 class="lp-title">Seja bem vindo!</h1>
+      <h3 class="lp-subtitle">Nosso app fornece uma maneira simples e prática de controlar seus ganhos e gastos.</h3>
+      <% if(!user) {%> 
+      <p>Inicie sua trajetória conosco, crie uma conta:</p>
+      <div class="buttons">
+        <a href="/login/index" class="btn btn-primary">Entrar</a>
+        <a href="/register/index" class="btn btn-secondary">Cadastre-se</a>
       </div>
-      <div class="col-lg-3"></div>
+      <% } else{ %> 
+        <div class="buttons">
+          <a href="/overview/index/<%= user._id %> " class="btn btn-primary">Overview</a>
+          <a href="/login/logout" class="btn logout-link">Sair</a>
+        </div>
+      <% } %> 
     </div>
-
-    
+    <div class="content-right">
+      <img src="/assets/img/Financas.JPG" alt="">
+    </div>
   </section>
-
+</main>
   <%- include('includes/footer') %>

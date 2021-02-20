@@ -1,4 +1,143 @@
 @charset "UTF-8";
+main.index {
+  overflow: hidden;
+}
+
+.landing-page {
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing-page .content-left {
+  max-width: 50%;
+  min-width: 576px;
+}
+
+.landing-page .content-left h3 {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-top: 15px;
+}
+
+.landing-page .content-left .buttons {
+  margin-top: 25px;
+}
+
+.landing-page .content-left .buttons a {
+  min-width: 130px;
+  border-radius: 0 !important;
+  border: 2px solid #00a0ff !important;
+}
+
+.landing-page .content-left .buttons a.logout-link {
+  position: relative;
+  color: #e52d27;
+  background-color: transparent !important;
+  border-color: #e52d27 !important;
+}
+
+.landing-page .content-left .buttons a.logout-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 101%;
+  background-color: #e52d27;
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+  z-index: -1;
+}
+
+.landing-page .content-left .buttons a.logout-link:hover {
+  color: white;
+}
+
+.landing-page .content-left .buttons a.logout-link:hover::after {
+  width: 100%;
+}
+
+.landing-page .content-left .buttons a.btn.btn-primary {
+  background-color: #00a0ff !important;
+}
+
+.landing-page .content-left .buttons a.btn.btn-primary:hover {
+  opacity: 1;
+}
+
+.landing-page .content-left .buttons a.btn.btn-secondary {
+  position: relative;
+  background-color: transparent !important;
+  border: 2px solid #00a0ff !important;
+  color: black;
+}
+
+.landing-page .content-left .buttons a.btn.btn-secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 101%;
+  background-color: #00a0ff;
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+  z-index: -1;
+}
+
+.landing-page .content-left .buttons a.btn.btn-secondary:hover {
+  color: white;
+}
+
+.landing-page .content-left .buttons a.btn.btn-secondary:hover::after {
+  width: 100%;
+}
+
+.landing-page .content-right {
+  max-width: 50%;
+}
+
+.landing-page .content-right {
+  min-height: 800px;
+  min-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("/assets/img/Blue-Circle.svg");
+  background-repeat: no-repeat;
+  background-size: 600px 600px;
+  background-position: left;
+}
+
+.landing-page .content-right img {
+  border-radius: 28px;
+  zoom: 70%;
+  -webkit-transform: translate3d(10%, 0, 0);
+          transform: translate3d(10%, 0, 0);
+}
+
+@media (max-width: 1369px) {
+  .landing-page {
+    max-width: 1024px;
+  }
+}
+
 .d-loading {
   position: fixed;
   top: 0;
@@ -448,7 +587,7 @@ a.transacoes:hover img {
 }
 
 .form-login .form .title-login {
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
 .form-login .form .form-group {
@@ -1338,6 +1477,13 @@ body {
 .app-container.block {
   display: block;
   opacity: 1;
+}
+
+.error-div {
+  color: red;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-left: 10px;
 }
 
 /* @MEDIA */

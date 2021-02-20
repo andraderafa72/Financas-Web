@@ -1,0 +1,93 @@
+@import './colors';
+
+main.index{
+  overflow: hidden;
+}
+.landing-page{
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .content-left{
+    max-width: 50%;min-width: 576px;
+    h3{font-size: 1.3rem; opacity: 0.8; margin-top: 15px;}
+    .buttons{
+      margin-top: 25px;
+      a{
+        min-width: 130px;
+        border-radius: 0!important;
+        border: 2px solid $blue!important;
+        &.logout-link{
+          position: relative;
+          color: $red; background-color: transparent!important; border-color: $red!important;
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 101%;
+            background-color: $red;
+            transition: .7s ease;
+            z-index: -1;
+          }
+          &:hover{
+            color: white;
+            &::after{width: 100%;}
+          }
+        }
+        &.btn.btn-primary{background-color: $blue!important; &:hover{opacity: 1;}}
+        &.btn.btn-secondary{
+          position: relative;
+          background-color: transparent!important;
+          border: 2px solid $blue!important;
+          color: black;
+
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 101%;
+            background-color: $blue;
+            transition: .7s ease;
+            z-index: -1;
+          }
+          &:hover{
+            color: white;
+            &::after{width: 100%;}
+          }
+        }
+      }
+    }
+  }
+  .content-right{max-width: 50%;}
+
+  .content-right{
+    min-height: 800px;
+    min-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/assets/img/Blue-Circle.svg');
+    background-repeat: no-repeat;
+    background-size: 600px 600px;
+    background-position: left;
+
+    img{
+      border-radius: 28px;
+      zoom: 70%;
+      transform: translate3d(10%,0,0);
+    }
+  }
+}
+
+@media(max-width:1369px){
+  .landing-page{
+    max-width: 1024px;
+  }
+}
