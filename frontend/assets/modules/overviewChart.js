@@ -1,9 +1,9 @@
 const url = 'https://financas-web-app.herokuapp.com/api/overview/chart';
 
 // URL PARA FETCH EM DESENVOLVIMENTO LOCALHOST
-const devUrl = 'http://localhost:5500/api/overview/chart';
+// const devUrl = 'http://localhost:5500/api/overview/chart';
 
-fetch(devUrl)
+fetch(url)
 .then( function(response) {
   return response.json()
 })
