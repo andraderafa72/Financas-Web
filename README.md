@@ -1,4 +1,4 @@
-# Finaças
+# Finanças
 A web app to manage your bills
 
 # Description
